@@ -1,0 +1,1335 @@
+{
+  "version": 1,
+  "programs": [
+    {
+      "slug": "anesthesia-technician",
+      "title": "Anesthesia Technician Certificate",
+      "metaDescription": "12-month Anesthesia Technician Certificate at FAHI Kenya — hybrid or physical study, clinical attachments, and career-ready perioperative training.",
+      "eyebrow": "Certificate program",
+      "heroImage": "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Clinical training environment representing anesthesia and perioperative care",
+      "intro": "This 12-month certificate program prepares learners to assist anesthesiologists and nurse anesthetists in surgical and critical care settings. Anesthesia technicians play a crucial role in organizing, monitoring, and maintaining anesthesia equipment throughout the entire procedure, from before to after. They also support patient care by assisting with airway management, medication preparation, and safety checks in the operating room.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "12 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Ksh 126,000"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent as approved by admissions).",
+      "modeOfStudy": "Physical or Hybrid — combine on-campus practical sessions with structured online learning through FAHI’s e-learning platform.",
+      "feesSummary": "Total program fee: Ksh 126,000. Detailed payment plans, registration fees, and optional kit costs are confirmed at enrollment.",
+      "feeRows": [
+        {
+          "item": "Tuition (program total)",
+          "detail": "Ksh 126,000"
+        },
+        {
+          "item": "Payment structure",
+          "detail": "Installment plan available — see admissions office"
+        },
+        {
+          "item": "Clinical attachments",
+          "detail": "Included in program design; site allocation per FAHI policy"
+        },
+        {
+          "item": "Learning materials",
+          "detail": "Digital resources via LMS; select print materials as advised"
+        }
+      ],
+      "curriculumIntro": "The curriculum blends theory, simulation where available, and supervised clinical practice. Exact module titles and sequencing are published in the official program outline.",
+      "curriculumBullets": [
+        "Anesthesia equipment, safety checks, and workspace preparation",
+        "Airway support and perioperative assistance protocols",
+        "Medication handling and documentation under supervision",
+        "Infection prevention and operating room standards",
+        "Clinical practicum and hospital attachments"
+      ],
+      "downloadsIntro": "Replace the links below with real PDFs when files are ready.",
+      "downloads": [
+        {
+          "label": "Program brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        },
+        {
+          "label": "Course outline / syllabus (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        },
+        {
+          "label": "Application form (PDF)",
+          "href": "#",
+          "icon": "fa-file-arrow-down"
+        }
+      ],
+      "employment": "Graduates may work in public and private hospitals, surgical centers, maternity wards, and specialty clinics, such as those specializing in orthopedics, ENT, or ophthalmology.",
+      "ctaHeadline": "Apply here — start your Anesthesia Technician journey with FAHI.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "Admissions info",
+        "href": "../../#admissions"
+      },
+      "megaGroup": "emergency"
+    },
+    {
+      "slug": "phlebotomy",
+      "title": "Phlebotomy Technician",
+      "metaDescription": "Hands-on phlebotomy training at FAHI — specimen collection, safety, and clinical readiness.",
+      "eyebrow": "Certificate program",
+      "heroImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Healthcare professional preparing for blood draw training",
+      "intro": "Develop safe, confident venipuncture and capillary collection skills for hospitals, labs, and community diagnostics. This program emphasizes infection control, patient communication, specimen handling, and quality standards aligned with clinical practice.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "6–9 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with supervised lab hours and clinical placement.",
+      "feesSummary": "Fees are confirmed at enrollment. Ask admissions for current tuition and payment options.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Quoted per intake"
+        },
+        {
+          "item": "Kit / lab fees",
+          "detail": "If applicable — confirmed at registration"
+        }
+      ],
+      "curriculumIntro": "Core topics include vascular anatomy, collection techniques, complications prevention, and professional practice.",
+      "curriculumBullets": [
+        "Venipuncture and capillary collection",
+        "Specimen labeling and chain of care",
+        "Infection prevention and PPE",
+        "Clinical practicum"
+      ],
+      "downloadsIntro": "Download brochures and forms when published.",
+      "downloads": [
+        {
+          "label": "Program brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        },
+        {
+          "label": "Course outline (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Graduates may support work in hospital labs, outpatient clinics, blood donation centres, and diagnostic chains.",
+      "ctaHeadline": "Ready to train in phlebotomy? Apply to FAHI today.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "nursing"
+    },
+    {
+      "slug": "emt",
+      "title": "Emergency Medical Technician (EMT)",
+      "metaDescription": "EMT training at FAHI — pre-hospital emergency care, life support foundations, and field readiness.",
+      "eyebrow": "Certificate program",
+      "heroImage": "https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Emergency medical response training scene",
+      "intro": "Prepare for frontline pre-hospital care with training in assessment, trauma and medical emergencies, communication, and ambulance operations. Practical drills and supervised clinical exposure build the confidence to respond in high-pressure settings.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "12 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE C– and above"
+        }
+      ],
+      "entryRequirement": "KCSE C– and above (or equivalent) — subject to FAHI admissions review.",
+      "modeOfStudy": "Physical or Hybrid with mandatory skills labs and field placements.",
+      "feesSummary": "Program fees vary by intake. Contact admissions for the latest fee sheet.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Quoted per intake"
+        },
+        {
+          "item": "Uniforms / equipment",
+          "detail": "As advised at registration"
+        }
+      ],
+      "curriculumIntro": "Integrated modules combine classroom theory, skills labs, and supervised clinical experience.",
+      "curriculumBullets": [
+        "Scene safety and patient assessment",
+        "Trauma and medical emergencies",
+        "BLS integration and teamwork",
+        "Ambulance operations and communication",
+        "Clinical attachment"
+      ],
+      "downloadsIntro": "Downloadable resources will be linked here.",
+      "downloads": [
+        {
+          "label": "Program brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Graduates may pursue roles supporting EMS providers, private ambulance services, industrial clinics, and event medical teams where regulations allow.",
+      "ctaHeadline": "Take the first step toward emergency care — apply now.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "Admissions info",
+        "href": "../../#admissions"
+      },
+      "megaGroup": "emergency"
+    },
+    {
+      "slug": "diploma-nursing",
+      "title": "Diploma in Nursing",
+      "metaDescription": "Nursing diploma pathway at FAHI — clinical skills, ethics, and workforce preparation.",
+      "eyebrow": "Diploma",
+      "heroImage": "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Nursing students in clinical learning environment",
+      "intro": "A comprehensive nursing diploma track focused on patient-centred care, clinical competencies, and professional values. The program combines theory, simulation, and hospital-based practice to graduate work-ready nurses aligned with local and international expectations.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "3 years"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Primarily physical"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE C plain and above"
+        }
+      ],
+      "entryRequirement": "KCSE C plain and above with cluster requirements as published for each intake.",
+      "modeOfStudy": "Primarily on-campus with digital supplements and structured clinical rotations.",
+      "feesSummary": "Tuition and payment schedules are issued per academic year. Scholarships or bursaries may be advertised separately.",
+      "feeRows": [
+        {
+          "item": "Annual tuition",
+          "detail": "Per fee structure"
+        },
+        {
+          "item": "Clinical fees",
+          "detail": "As per policy"
+        }
+      ],
+      "curriculumIntro": "Progressive modules build from foundations to advanced nursing care across the lifespan.",
+      "curriculumBullets": [
+        "Foundations of nursing and pathophysiology",
+        "Medical–surgical nursing",
+        "Maternal and child health",
+        "Community and public health nursing",
+        "Leadership, ethics, and research literacy"
+      ],
+      "downloadsIntro": "Prospectus and application pack (when available).",
+      "downloads": [
+        {
+          "label": "Program brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        },
+        {
+          "label": "Entry requirements sheet (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Graduates may seek employment in hospitals, clinics, home care, schools, and community programmes subject to regulatory registration requirements.",
+      "ctaHeadline": "Build a nursing career with FAHI — apply today.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "nursing"
+    },
+    {
+      "slug": "cna-hsa",
+      "title": "CNA / Health Support Assistant",
+      "metaDescription": "CNA and health support assistant training at FAHI — bedside care and caregiver skills.",
+      "eyebrow": "Certificate",
+      "heroImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Caregiver supporting a patient",
+      "intro": "Entry-level caregiver training covering vital signs, mobility assistance, hygiene, nutrition support, and communication. Ideal for learners beginning a career in nursing support or home-based care.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "6 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D plain and above"
+        }
+      ],
+      "entryRequirement": "KCSE D plain and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with practical skills labs.",
+      "feesSummary": "Contact admissions for current fees and start dates.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Quoted per intake"
+        }
+      ],
+      "curriculumIntro": "Practical modules prepare you for supervised bedside support roles.",
+      "curriculumBullets": [
+        "Introduction to healthcare and ethics",
+        "Activities of daily living",
+        "Vital signs and reporting",
+        "Clinical practicum"
+      ],
+      "downloadsIntro": "Downloads coming soon.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Graduates may work in nursing homes, hospitals, home care agencies, and private households where regulations allow.",
+      "ctaHeadline": "Start your caregiver career — apply to FAHI.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "nursing"
+    },
+    {
+      "slug": "perioperative-theatre-tech",
+      "title": "Perioperative Theatre Technician",
+      "metaDescription": "Theatre technology and perioperative support training at FAHI.",
+      "eyebrow": "Certificate program",
+      "heroImage": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Operating theatre environment",
+      "intro": "Train in sterile technique, instrumentation, OR workflows, and perioperative safety. This pathway supports learners aiming to assist surgical teams in hospital theatre departments.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "12 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with mandatory theatre skills hours.",
+      "feesSummary": "Fees confirmed at enrollment.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        },
+        {
+          "item": "Scrub kits",
+          "detail": "As advised"
+        }
+      ],
+      "curriculumIntro": "Sterile processing, instrumentation, and perioperative protocols.",
+      "curriculumBullets": [
+        "Surgical environment and safety",
+        "Instrumentation and equipment",
+        "Sterile field maintenance",
+        "Clinical attachment"
+      ],
+      "downloadsIntro": "Resources to be linked.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Theatre departments in public and private hospitals, day surgery units, and specialty centres.",
+      "ctaHeadline": "Train for the operating theatre — apply now.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "emergency"
+    },
+    {
+      "slug": "ekg-technician",
+      "title": "EKG / ECG Technician",
+      "metaDescription": "Cardiac monitoring and ECG technician training at FAHI.",
+      "eyebrow": "Certificate program",
+      "heroImage": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "ECG and diagnostic equipment",
+      "intro": "Learn rhythm recognition, electrode placement, equipment troubleshooting, and reporting standards for cardiac diagnostics in outpatient and inpatient settings.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "6–9 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with lab practice.",
+      "feesSummary": "Fees confirmed at enrollment.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        }
+      ],
+      "curriculumIntro": "Foundations through advanced ECG interpretation support.",
+      "curriculumBullets": [
+        "Cardiac anatomy and physiology",
+        "Lead placement and recording",
+        "Rhythm analysis fundamentals",
+        "Clinical practicum"
+      ],
+      "downloadsIntro": "Downloads coming soon.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Cardiology clinics, hospitals, diagnostic imaging centres, and occupational health programmes.",
+      "ctaHeadline": "Start your cardiac diagnostics pathway — apply.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    },
+    {
+      "slug": "community-health",
+      "title": "Community Health",
+      "metaDescription": "Community health programme at FAHI — outreach, prevention, and primary care support.",
+      "eyebrow": "Diploma / Certificate",
+      "heroImage": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Community health outreach",
+      "intro": "Prepare for roles in health promotion, disease prevention, and community-based support. The programme links classroom learning with field practice in diverse community settings.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "Varies by track"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "See prospectus"
+        }
+      ],
+      "entryRequirement": "Varies by certificate or diploma track — see admissions for the latest matrix.",
+      "modeOfStudy": "Physical or Hybrid with community fieldwork.",
+      "feesSummary": "Fees depend on programme track.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per track / intake"
+        }
+      ],
+      "curriculumIntro": "Community diagnosis, health education, and programme implementation.",
+      "curriculumBullets": [
+        "Epidemiology basics",
+        "Health communication",
+        "Maternal and child health",
+        "Field practicum"
+      ],
+      "downloadsIntro": "Downloads coming soon.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "NGOs, county health teams, facilities, and community-based organisations.",
+      "ctaHeadline": "Serve your community in health — apply to FAHI.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "nursing"
+    },
+    {
+      "slug": "home-based-care",
+      "title": "Home-Based Care",
+      "metaDescription": "Home-based care training at FAHI — dignified support for clients at home.",
+      "eyebrow": "Certificate",
+      "heroImage": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Home care support",
+      "intro": "Skills for safe personal care, chronic disease support, documentation, and family communication in home settings. Emphasises dignity, boundaries, and infection prevention.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "4–6 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D plain and above"
+        }
+      ],
+      "entryRequirement": "KCSE D plain and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with skills demonstrations.",
+      "feesSummary": "Fees confirmed at enrollment.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        }
+      ],
+      "curriculumIntro": "Core caregiving and safety for home environments.",
+      "curriculumBullets": [
+        "Personal care and mobility",
+        "Nutrition and medication reminders",
+        "Care planning and documentation",
+        "Practicum"
+      ],
+      "downloadsIntro": "Downloads coming soon.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Home care agencies, hospice support roles where applicable, and private duty assignments.",
+      "ctaHeadline": "Train for compassionate home care — apply.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "support"
+    },
+    {
+      "slug": "mortuary-sciences",
+      "title": "Mortuary Sciences",
+      "metaDescription": "Mortuary sciences introduction at FAHI — professional, ethical preparation.",
+      "eyebrow": "Certificate / short course",
+      "heroImage": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Healthcare facility corridor",
+      "intro": "Foundational study in thanatology support, ethics, biosafety, and facility procedures for learners entering mortuary services pathways under institutional supervision.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "See prospectus"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Primarily physical"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "Admissions interview"
+        }
+      ],
+      "entryRequirement": "Minimum academic threshold and interview as published for each intake.",
+      "modeOfStudy": "Primarily physical with structured lab and observation components.",
+      "feesSummary": "Fees issued per intake.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        }
+      ],
+      "curriculumIntro": "Ethics, safety, and introductory technical foundations.",
+      "curriculumBullets": [
+        "Professional ethics and communication",
+        "Biosafety and infection control",
+        "Facility workflows",
+        "Supervised observation block"
+      ],
+      "downloadsIntro": "Downloads when available.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Pathways vary by regulation; graduates may support roles in accredited facilities where permitted.",
+      "ctaHeadline": "Request information and apply through admissions.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "support"
+    },
+    {
+      "slug": "ielts-prep",
+      "title": "IELTS Preparation",
+      "metaDescription": "IELTS preparation at FAHI — academic and general training support.",
+      "eyebrow": "Professional course",
+      "heroImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Students studying language skills",
+      "intro": "Structured preparation for listening, reading, writing, and speaking with timed practice, feedback, and test strategies for international English exams.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "6–12 weeks"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "Placement test"
+        }
+      ],
+      "entryRequirement": "Short placement or interview to assign level.",
+      "modeOfStudy": "Physical or Hybrid with live and recorded sessions.",
+      "feesSummary": "Modular fees per cycle — ask admissions.",
+      "feeRows": [
+        {
+          "item": "Course fee",
+          "detail": "Per module / cycle"
+        }
+      ],
+      "curriculumIntro": "Skills-based bands aligned to exam tasks.",
+      "curriculumBullets": [
+        "Listening and note-taking",
+        "Academic reading strategies",
+        "Task 1 / Task 2 writing",
+        "Speaking fluency and coherence"
+      ],
+      "downloadsIntro": "Practice packs when available.",
+      "downloads": [
+        {
+          "label": "Course flyer (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Supports university admission and migration documentation goals; not a job-placement programme.",
+      "ctaHeadline": "Book your IELTS prep seat — apply or enquire.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "international"
+    },
+    {
+      "slug": "bls-acls",
+      "title": "BLS / ACLS / PALS",
+      "metaDescription": "Life support certifications at FAHI — BLS, ACLS, and PALS pathways.",
+      "eyebrow": "Short certifications",
+      "heroImage": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Clinical resuscitation training",
+      "intro": "Provider-level courses in basic and advanced cardiovascular life support, with paediatric options where offered. Designed for clinicians and students who need recognised cards for practice sites.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "1–2 days per course"
+        },
+        {
+          "label": "Fee",
+          "value": "Per course — ask FAHI"
+        },
+        {
+          "label": "Mode of study",
+          "value": "In-person skills"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "Varies by ACLS/PALS"
+        }
+      ],
+      "entryRequirement": "BLS open to beginners; ACLS/PALS may require prior clinical training — confirm with calendar.",
+      "modeOfStudy": "In-person skills sessions with blended precoursework where applicable.",
+      "feesSummary": "Each certification is priced separately.",
+      "feeRows": [
+        {
+          "item": "BLS",
+          "detail": "Per seat"
+        },
+        {
+          "item": "ACLS / PALS",
+          "detail": "Per seat"
+        }
+      ],
+      "curriculumIntro": "AHA-aligned content where FAHI is authorised to deliver; cards issued per policy.",
+      "curriculumBullets": [
+        "High-quality CPR",
+        "Algorithms and team dynamics",
+        "Airway and pharmacology modules",
+        "Megacode skills evaluation"
+      ],
+      "downloadsIntro": "Pre-course links provided after registration.",
+      "downloads": [
+        {
+          "label": "Schedule (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Supports employment requirements in hospitals and clinics that mandate current provider cards.",
+      "ctaHeadline": "Register for your next life-support course.",
+      "ctaPrimary": {
+        "label": "Apply / Register",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "emergency"
+    },
+    {
+      "slug": "radiography-assistant",
+      "title": "Radiography & Imaging Support",
+      "metaDescription": "Sample programme — imaging department support, patient positioning, and safety at FAHI.",
+      "eyebrow": "Certificate (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Medical imaging equipment in a hospital setting",
+      "intro": "Introductory pathway for learners supporting diagnostic imaging teams. Covers patient preparation, basic positioning concepts, radiation safety culture, communication, and department workflows alongside supervised observation blocks.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "9–12 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Sample — ask admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with mandatory lab and clinical observation hours.",
+      "feesSummary": "Sample fee row below — replace with approved figures per intake.",
+      "feeRows": [
+        {
+          "item": "Tuition (sample)",
+          "detail": "Quoted per intake"
+        },
+        {
+          "item": "Clinical / placement",
+          "detail": "Per FAHI policy"
+        }
+      ],
+      "curriculumIntro": "Foundations through department-ready professional habits.",
+      "curriculumBullets": [
+        "Imaging department roles and ethics",
+        "Patient interaction and consent basics",
+        "Safety, PPE, and infection prevention",
+        "Supervised clinical observation"
+      ],
+      "downloadsIntro": "Sample download row — attach real PDFs later.",
+      "downloads": [
+        {
+          "label": "Sample brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        },
+        {
+          "label": "Sample outline (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Sample text: imaging departments, outpatient diagnostic centres, and training pathways toward further specialization where regulations allow.",
+      "ctaHeadline": "Sample CTA — apply to FAHI for the next intake.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    },
+    {
+      "slug": "dental-assistant",
+      "title": "Dental Assistant",
+      "metaDescription": "Sample programme — chairside assistance, sterilization, and dental office readiness at FAHI.",
+      "eyebrow": "Certificate (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Dental care setting",
+      "intro": "Prepare for entry-level dental practice support with training in four-handed dentistry basics, instrument processing, infection control, scheduling, and patient communication within supervised clinical and lab sessions.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "8–10 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Sample — ask admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with skills laboratory sessions.",
+      "feesSummary": "Tuition and kit fees are confirmed at registration.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        },
+        {
+          "item": "Uniform / kit",
+          "detail": "As advised"
+        }
+      ],
+      "curriculumIntro": "Chairside and office-ready competencies.",
+      "curriculumBullets": [
+        "Dental anatomy and terminology",
+        "Sterilization and instrument trays",
+        "Chairside assisting fundamentals",
+        "Practicum in partner clinics"
+      ],
+      "downloadsIntro": "Brochure and forms (sample links).",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Dental clinics, hospital dental units, and orthodontic practices where assistant roles are permitted.",
+      "ctaHeadline": "Train as a dental assistant — apply to FAHI.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    },
+    {
+      "slug": "pharmacy-technician",
+      "title": "Pharmacy Technician (Introductory)",
+      "metaDescription": "Sample programme — dispensary support, inventory, and pharmaceutical calculations introduction.",
+      "eyebrow": "Certificate (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Pharmacy shelves and medication storage",
+      "intro": "Foundational study for pharmacy support roles: classification of medicines, dispensing workflow under supervision, inventory basics, calculations, and regulatory awareness aligned with local practice settings.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "10–12 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Sample — ask admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE C– and above"
+        }
+      ],
+      "entryRequirement": "KCSE C– and above including Mathematics and English (or equivalent).",
+      "modeOfStudy": "Physical or Hybrid with case-based online modules.",
+      "feesSummary": "Fees published per intake cycle.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per intake"
+        },
+        {
+          "item": "Lab / software",
+          "detail": "If applicable"
+        }
+      ],
+      "curriculumIntro": "Dispensary-ready knowledge and professional conduct.",
+      "curriculumBullets": [
+        "Pharmacy law and ethics overview",
+        "Calculations and labeling",
+        "Inventory and cold-chain awareness",
+        "Supervised practicum"
+      ],
+      "downloadsIntro": "Sample downloads.",
+      "downloads": [
+        {
+          "label": "Brochure (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        },
+        {
+          "label": "Reading list (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Retail and hospital pharmacies, wholesale depots, and NGO medical logistics where technician cadres are recognised.",
+      "ctaHeadline": "Start your pharmacy support pathway.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    },
+    {
+      "slug": "health-informatics",
+      "title": "Health Records & Informatics",
+      "metaDescription": "Sample programme — electronic records, coding basics, and health data literacy.",
+      "eyebrow": "Professional course (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Healthcare documentation and technology",
+      "intro": "Build skills for digital health environments: documentation standards, privacy principles, basic analytics literacy, and interoperability concepts for hospitals and clinics transitioning to paper-light workflows.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "4–6 months"
+        },
+        {
+          "label": "Fee",
+          "value": "Sample — ask admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE D+ and above"
+        }
+      ],
+      "entryRequirement": "KCSE D+ and above; basic computer literacy recommended.",
+      "modeOfStudy": "Hybrid with live online sessions and on-campus workshops.",
+      "feesSummary": "Modular pricing possible — confirm with admissions.",
+      "feeRows": [
+        {
+          "item": "Course fee",
+          "detail": "Per cohort"
+        }
+      ],
+      "curriculumIntro": "Data stewardship in patient-centred care.",
+      "curriculumBullets": [
+        "Health information governance",
+        "EHR workflows and quality indicators",
+        "Introduction to coding / classification (sample)",
+        "Capstone project"
+      ],
+      "downloadsIntro": "Sample resources.",
+      "downloads": [
+        {
+          "label": "Syllabus (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Health information departments, M&E units, insurance claims support, and digital health startups.",
+      "ctaHeadline": "Upskill in health informatics — apply today.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "technical"
+    },
+    {
+      "slug": "infection-prevention",
+      "title": "Infection Prevention & Control (IPC)",
+      "metaDescription": "Sample short programme — IPC fundamentals for healthcare teams.",
+      "eyebrow": "Short course (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1584036561562-baf8f5f1b144?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Hand hygiene and infection control in healthcare",
+      "intro": "Strengthen facility-wide IPC culture through evidence-based modules on hand hygiene, environmental cleaning, outbreak readiness, surveillance basics, and audit tools for nurses, support staff, and team leads.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "6–8 weeks"
+        },
+        {
+          "label": "Fee",
+          "value": "Sample — ask admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "Healthcare role or student"
+        }
+      ],
+      "entryRequirement": "Open to healthcare workers and students in health programmes (sample rule).",
+      "modeOfStudy": "Hybrid with skills demonstrations on campus.",
+      "feesSummary": "Cohort-based fee — ask FAHI calendar.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per seat / cohort"
+        }
+      ],
+      "curriculumIntro": "IPC essentials for frontline teams.",
+      "curriculumBullets": [
+        "Standard and transmission-based precautions",
+        "Cleaning, disinfection, and sterilization overview",
+        "Surveillance and reporting",
+        "Quality improvement drills"
+      ],
+      "downloadsIntro": "Participant handbook (sample).",
+      "downloads": [
+        {
+          "label": "IPC checklist pack (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "Supports roles in IPC link nursing, quality offices, and facility accreditation preparation teams.",
+      "ctaHeadline": "Join the next IPC cohort.",
+      "ctaPrimary": {
+        "label": "Apply / Register",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    },
+    {
+      "slug": "social-work-program",
+      "title": "Social Work & Community Development",
+      "metaDescription": "Sample programme — community assessment, case management basics, and ethics.",
+      "eyebrow": "Diploma track (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Community outreach and support",
+      "intro": "Explore social welfare systems, community assessment, participatory development, counselling micro-skills, and ethical documentation for work with vulnerable populations in partnership with local agencies.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "2 years (sample)"
+        },
+        {
+          "label": "Fee",
+          "value": "Contact admissions"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE C– and above"
+        }
+      ],
+      "entryRequirement": "KCSE C– and above with cluster guidance per prospectus (sample).",
+      "modeOfStudy": "Physical or Hybrid with field practicum blocks.",
+      "feesSummary": "Annual fee structure issued per academic year.",
+      "feeRows": [
+        {
+          "item": "Tuition",
+          "detail": "Per year"
+        },
+        {
+          "item": "Field practicum",
+          "detail": "Logistics per policy"
+        }
+      ],
+      "curriculumIntro": "Theory and field-integrated social work foundations.",
+      "curriculumBullets": [
+        "Human behaviour and social systems",
+        "Community mobilisation",
+        "Case management introduction",
+        "Ethics and professional boundaries",
+        "Field placement"
+      ],
+      "downloadsIntro": "Prospectus sample.",
+      "downloads": [
+        {
+          "label": "Prospectus (PDF)",
+          "href": "#",
+          "icon": "fa-file-pdf"
+        }
+      ],
+      "employment": "NGOs, county social services, schools, and community programmes — subject to regulatory registration where required.",
+      "ctaHeadline": "Serve communities through FAHI.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "support"
+    },
+    {
+      "slug": "kcse-bridging",
+      "title": "KCSE Bridging (Sciences)",
+      "metaDescription": "Sample bridging programme — strengthen Biology/Chemistry for health programmes.",
+      "eyebrow": "Bridging (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Students studying sciences",
+      "intro": "Targeted bridging in core sciences and exam skills for learners who need to meet minimum cluster thresholds for health-related diplomas and certificates at FAHI or partner institutions.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "1–2 terms"
+        },
+        {
+          "label": "Fee",
+          "value": "Per subject — ask FAHI"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Physical or Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "KCSE sitting / results"
+        }
+      ],
+      "entryRequirement": "Open to learners with prior KCSE or equivalent; placement test may apply (sample).",
+      "modeOfStudy": "Physical or Hybrid with weekly assessments.",
+      "feesSummary": "Priced per subject module.",
+      "feeRows": [
+        {
+          "item": "Biology module",
+          "detail": "Sample fee row"
+        },
+        {
+          "item": "Chemistry module",
+          "detail": "Sample fee row"
+        }
+      ],
+      "curriculumIntro": "Accelerated review and exam technique.",
+      "curriculumBullets": [
+        "Biology for health sciences",
+        "Chemistry foundations",
+        "Mathematics support (optional)",
+        "Exam strategy workshops"
+      ],
+      "downloadsIntro": "Timetable sample.",
+      "downloads": [
+        {
+          "label": "Timetable (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Progression into FAHI health programmes or further academic pathways — not a terminal employment credential.",
+      "ctaHeadline": "Bridge your grades — enquire or apply.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "technical"
+    },
+    {
+      "slug": "ascpi-prep",
+      "title": "ASCPi / International Lab Prep (Sample)",
+      "metaDescription": "Sample exam-preparation track for international laboratory certification goals.",
+      "eyebrow": "Exam prep (sample)",
+      "heroImage": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1200&h=900&fit=crop&q=80&auto=format",
+      "heroImageAlt": "Laboratory microscope and diagnostics",
+      "intro": "Structured review for international exam routes (sample): laboratory operations, discipline-specific theory drills, timed practice, and study planning for candidates who already meet exam body eligibility rules.",
+      "facts": [
+        {
+          "label": "Duration",
+          "value": "12–20 weeks"
+        },
+        {
+          "label": "Fee",
+          "value": "Package — ask FAHI"
+        },
+        {
+          "label": "Mode of study",
+          "value": "Hybrid"
+        },
+        {
+          "label": "Entry requirement",
+          "value": "Eligibility review"
+        }
+      ],
+      "entryRequirement": "Candidates must meet exam-body eligibility independently; FAHI provides preparatory training only (sample disclaimer).",
+      "modeOfStudy": "Hybrid with live tutorials and question banks.",
+      "feesSummary": "Package fee excludes exam registration paid to external bodies.",
+      "feeRows": [
+        {
+          "item": "Prep tuition",
+          "detail": "Per package"
+        },
+        {
+          "item": "Exam registration",
+          "detail": "Paid to exam body"
+        }
+      ],
+      "curriculumIntro": "High-yield review and test strategy.",
+      "curriculumBullets": [
+        "Content blueprint mapping",
+        "Timed practice blocks",
+        "Weak-area coaching",
+        "Mock assessments"
+      ],
+      "downloadsIntro": "Sample schedule.",
+      "downloads": [
+        {
+          "label": "Prep calendar (PDF)",
+          "href": "#",
+          "icon": "fa-file-lines"
+        }
+      ],
+      "employment": "Supports eligibility for international roles where certification is recognised — outcomes depend on individual exam success.",
+      "ctaHeadline": "Prepare with FAHI — apply or book consultation.",
+      "ctaPrimary": {
+        "label": "Apply Now",
+        "href": "../../#contact"
+      },
+      "ctaSecondary": {
+        "label": "All programs",
+        "href": "../../programs/"
+      },
+      "megaGroup": "diagnostic"
+    }
+  ]
+}

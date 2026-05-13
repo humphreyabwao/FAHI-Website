@@ -1,0 +1,174 @@
+{
+  "members": [
+    {
+      "id": "tom-mboya-awinda",
+      "category": "instructor",
+      "sortOrder": 10,
+      "name": "Tom Mboya Awinda",
+      "role": "RN Skills Lab & Classroom Instructor - Nairobi",
+      "bio": "RN with a diploma in Community Health. Teaches Levels 3-5 and skills lab. Works in the Medical-Surgical Unit at a major Nairobi hospital.",
+      "imageUrl": "assets/images/staff/tom-mboya-awinda.jpg",
+      "imageAlt": "Tom Mboya Awinda"
+    },
+    {
+      "id": "nancy-mugah",
+      "category": "instructor",
+      "sortOrder": 20,
+      "name": "Nancy Mugah, RN",
+      "role": "Skills Lab & Classroom Instructor - Voi",
+      "bio": "RN with a KMTC diploma. Leads skills and classroom instruction at FAHI Voi. Also serves part-time at the River Jordan Level Four Medical Centre.",
+      "imageUrl": "assets/images/staff/nancy-mugah.jpg",
+      "imageAlt": "Nancy Mugah"
+    },
+    {
+      "id": "patricia-mungai",
+      "category": "instructor",
+      "sortOrder": 30,
+      "name": "Patricia Mungai, B.Ed. Science",
+      "role": "Classroom Instructor - Nairobi",
+      "bio": "Experienced Biology and Math teacher. Supports Anatomy & Physiology and KCSE upgrading. Holds caregiving certification from FAHI.",
+      "imageUrl": "assets/images/staff/patricia-mungai.jpg",
+      "imageAlt": "Patricia Mungai"
+    },
+    {
+      "id": "veronicah-kiage",
+      "category": "instructor",
+      "sortOrder": 40,
+      "name": "Veronicah Kiage, RN",
+      "role": "Classroom Instructor - Voi",
+      "bio": "Medical-Surgical Nurse with 7+ years' experience. AHA-certified BLS provider. Teaches Levels 3-5 at FAHI Voi while working full-time at Moi County Referral Hospital.",
+      "imageUrl": "assets/images/staff/veronicah-kiage.jpg",
+      "imageAlt": "Veronicah Kiage"
+    },
+    {
+      "id": "wilson-owuor",
+      "category": "tutor",
+      "sortOrder": 10,
+      "name": "Wilson Owuor, BSN, RN",
+      "role": "Principal - FAHI Nairobi",
+      "bio": "Veteran nurse with 20+ years' experience. AHA-certified BLS instructor and founder of Kemrif Hospital. Leads academic instruction and mentorship at FAHI Nairobi.",
+      "imageUrl": "assets/images/staff/wilson-owuor.jpg",
+      "imageAlt": "Wilson Owuor"
+    },
+    {
+      "id": "carolyne-gatwiri",
+      "category": "tutor",
+      "sortOrder": 20,
+      "name": "Carolyne Gatwiri, BSN, RN",
+      "role": "Principal Tutor, Hybrid Program",
+      "bio": "Registered Nurse with 13+ years' experience. Leads FAHI's Hybrid Program and works full-time at Meru Level Five Hospital, combining clinical insights with teaching.",
+      "imageUrl": "assets/images/staff/carolyne-gatwiri.jpg",
+      "imageAlt": "Carolyne Gatwiri"
+    },
+    {
+      "id": "kones-chebet-sharon",
+      "category": "tutor",
+      "sortOrder": 30,
+      "name": "Kones Chebet Sharon, BSN, RN",
+      "role": "Hybrid Tutor, FAHI-Kenya",
+      "bio": "ICU nurse and TVETA-certified trainer. Leads FAHI Mombasa academics, emergency response, and skills lab training. Also serves as Lead AHA BLS & ACLS Instructor.",
+      "imageUrl": "assets/images/staff/kones-chebet-sharon.jpg",
+      "imageAlt": "Kones Chebet Sharon"
+    },
+    {
+      "id": "george-isaboke",
+      "category": "tutor",
+      "sortOrder": 40,
+      "name": "George Isaboke, BSN, RN",
+      "role": "Hybrid Program Tutor",
+      "bio": "Medical-Surgical Nurse with 12+ years' experience. Teaches Anatomy & Physiology in the Hybrid Program—full-time nurse at Machakos Level Five Hospital.",
+      "imageUrl": "assets/images/staff/george-isaboke.jpg",
+      "imageAlt": "George Isaboke"
+    },
+    {
+      "id": "josephine-mwashao",
+      "category": "tutor",
+      "sortOrder": 50,
+      "name": "Josephine Mwashao, BSc MLS, Dip. MLS, ASCPI (USA)",
+      "role": "Tutor & ASCPI Prep Trainer - FAHI Voi",
+      "bio": "Medical Lab Technologist with 8+ years' experience. Leads ASCPI prep classes and core lab subjects. Works full-time at Moi County Referral Hospital.",
+      "imageUrl": "assets/images/staff/josephine-mwashao.jpg",
+      "imageAlt": "Josephine Mwashao"
+    },
+    {
+      "id": "joshua-nkomo",
+      "category": "tutor",
+      "sortOrder": 60,
+      "name": "Joshua Nkomo, M.Ed., B.Ed., Diploma in ICT",
+      "role": "Hybrid Tutor - ICT, Basic & Advanced Computer Applications",
+      "bio": "Joshua Nkomo is a dedicated educator with expertise in ICT and humanities, holding a Master's degree in Education, a Bachelor's degree in Education, and a Diploma in ICT.",
+      "imageUrl": "assets/images/staff/joshua-nkomo.jpg",
+      "imageAlt": "Joshua Nkomo"
+    },
+    {
+      "id": "jeniffer-saruh",
+      "category": "tutor",
+      "sortOrder": 70,
+      "name": "Jeniffer Saruh, BSN, RN, AHA BLS Certified Provider",
+      "role": "Principal Tutor, FAHI Voi Learning Centre",
+      "bio": "Registered Nurse with 20+ years' clinical and leadership experience. Former Sub-County Nurse with expertise in emergency childbirth and newborn care. Currently serves as Principal Tutor at FAHI Voi.",
+      "imageUrl": "assets/images/staff/jeniffer-saruh.jpg",
+      "imageAlt": "Jeniffer Saruh"
+    },
+    {
+      "id": "marc-gordon-sobukwe",
+      "category": "staff",
+      "sortOrder": 10,
+      "name": "Marc Gordon Sobukwe, MSN, BSN, RN, CEO & Program Director",
+      "role": "Certified CNA Trainer (USA) | TVETA Certified Trainer",
+      "bio": "Marc Gordon Sobukwe is a seasoned RN licensed in the USA and Kenya. He currently works as a travel nurse in the United States and leads FAHI as CEO and Program Director.",
+      "imageUrl": "assets/images/staff/marc-gordon-sobukwe.jpg",
+      "imageAlt": "Marc Gordon Sobukwe"
+    },
+    {
+      "id": "daisy-asadhi",
+      "category": "staff",
+      "sortOrder": 20,
+      "name": "Daisy Asadhi, B.Ed. (Special Needs), CNA, AHA BLS Certified Instructor",
+      "role": "Administrator, FAHI Nairobi Learning Centre",
+      "bio": "Daisy Asadhi is an experienced CNA and Administrative Manager at FAHI Nairobi Learning Centre. She also works as a CNA with a leading hospital in Nairobi.",
+      "imageUrl": "assets/images/staff/daisy-asadhi.jpg",
+      "imageAlt": "Daisy Asadhi"
+    },
+    {
+      "id": "felix-onyango",
+      "category": "staff",
+      "sortOrder": 30,
+      "name": "Felix Onyango",
+      "role": "Emergency Care & Skills Lab Coordinator - Mombasa",
+      "bio": "CNA and BLS Instructor with a background in electronics. Works at a Level Six hospital and manages emergency and lab training at FAHI.",
+      "imageUrl": "assets/images/staff/felix-onyango.jpg",
+      "imageAlt": "Felix Onyango"
+    },
+    {
+      "id": "lydiah-mwakiwiwi",
+      "category": "staff",
+      "sortOrder": 40,
+      "name": "Lydiah Mwakiwiwi, Dip. Bus. Admin, CNA",
+      "role": "Administrator, FAHI Mombasa Learning Centre",
+      "bio": "CNA and BLS Instructor. Oversees operations, placements, and skills assessments at FAHI Mombasa. Coordinates home-based care in the Lower Coast region.",
+      "imageUrl": "assets/images/staff/lydiah-mwakiwiwi.jpg",
+      "imageAlt": "Lydiah Mwakiwiwi"
+    },
+    {
+      "id": "derrick-otwori",
+      "category": "staff",
+      "sortOrder": 50,
+      "name": "Derrick Otwori, AHA BLS Certified Instructor, CNA, Diploma in Journalism",
+      "role": "Admission, Hybrid Learning, and Registry Coordinator",
+      "bio": "Derrick Otwori is a CNA and Admission, Hybrid Learning & Registry Coordinator at FAHI while also working full-time as a Professional Caregiver at a Level Five hospital.",
+      "imageUrl": "assets/images/staff/derrick-otwori.jpg",
+      "imageAlt": "Derrick Otwori"
+    },
+    {
+      "id": "silvanus-mwakoma",
+      "category": "staff",
+      "sortOrder": 60,
+      "name": "Rev. Silvanus Mwakoma, B.A. Theology",
+      "role": "Administrative Assistant, FAHI - Kenya LTD",
+      "bio": "Rev. Silvanus Mwakoma is an ordained Anglican priest. He oversees hybrid class schedules, student counseling, mentorship, conflict resolution, and the issuance of clinical logbooks.",
+      "imageUrl": "assets/images/staff/silvanus-mwakoma.jpg",
+      "imageAlt": "Rev. Silvanus Mwakoma"
+    }
+  ]
+}

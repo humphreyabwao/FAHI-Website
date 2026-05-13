@@ -1,0 +1,237 @@
+.learning-modes-page {
+  background: #f8fafc;
+}
+
+.lm-hero {
+  position: relative;
+  padding: 3.8rem 0 3.2rem;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(11, 47, 74, 0.78), rgba(0, 119, 200, 0.74)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1800&h=1100&fit=crop&q=80&auto=format") center / cover no-repeat,
+    radial-gradient(700px 240px at 15% 20%, rgba(16, 183, 196, 0.28), transparent 60%),
+    linear-gradient(135deg, #0b2f4a 0%, #0077c8 100%);
+}
+
+.lm-hero__inner {
+  display: block;
+}
+
+.lm-hero__copy {
+  min-width: 0;
+}
+
+.lm-hero__eyebrow {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lm-hero__title {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.65rem, 3.8vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+.lm-hero__lead {
+  margin: 0;
+  max-width: 52rem;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.lm-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid #edf2f7;
+}
+
+.lm-section--soft {
+  background: #ffffff;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.lm-section--cta {
+  padding-top: 2.2rem;
+  padding-bottom: 2.9rem;
+}
+
+.lm-section__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.3rem, 2.6vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0b2f4a;
+}
+
+.lm-section__intro {
+  margin: 0 0 0.95rem;
+  max-width: 54rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.lm-section__sub {
+  margin: 1.3rem 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b2f4a;
+}
+
+.lm-modes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.lm-card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0.2rem 0 0.45rem;
+  box-shadow: none;
+}
+
+.lm-card__title {
+  margin: 0 0 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #0b2f4a;
+}
+
+.lm-card__title span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #0077c8;
+}
+
+.lm-card__sub {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #0b2f4a;
+}
+
+.lm-card__text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.lm-list {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.lm-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-size: 0.86rem;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.lm-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.62rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #94a3b8;
+}
+
+.lm-list--compact li {
+  font-weight: 600;
+}
+
+.lm-note {
+  margin: 0.75rem 0 0;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #0b2f4a;
+}
+
+.lm-requirements {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+
+.lm-requirement {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem 0.8rem;
+}
+
+.lm-requirement h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  color: #0b2f4a;
+}
+
+.lm-requirement p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.lm-cta {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 0.95rem 1.05rem;
+  box-shadow: none;
+}
+
+.lm-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1100px) {
+  .lm-modes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lm-requirements {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .lm-hero {
+    padding: 2.9rem 0 2.5rem;
+  }
+
+  .lm-section {
+    padding: 1.9rem 0;
+  }
+
+  .lm-cta {
+    padding: 1rem 0.95rem 1.05rem;
+  }
+}

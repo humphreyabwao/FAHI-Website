@@ -1,0 +1,21 @@
+FAHI Firestore + Cloudinary (quick reference)
+==============================================
+
+1) Firebase Console: enable Firestore (Native). Deploy rules: firebase deploy --only firestore:rules (or paste firestore.rules in the console Rules tab).
+
+2) Seed programmes from this repo:
+   npm install
+   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/serviceAccount.json"
+   npm run seed:programs
+
+3) Cloudinary: create a cloud. Set on the site before loading modules, e.g. in index.html <head>:
+   <script>window.__FAHI_CONFIG__ = window.__FAHI_CONFIG__ || {}; window.__FAHI_CONFIG__.cloudinaryCloudName = "your-cloud-name";</script>
+
+4) Per programme in Firestore you can use EITHER:
+   - heroImage: full URL (e.g. Unsplash), OR
+   - heroImagePublicId: Cloudinary public id + optional heroImageVersion (cache bust when you replace the asset)
+
+5) Authorised domains: Firebase Console → Authentication → Settings → Authorised domains — add localhost and your production host.
+
+6) Optional: override Firebase config without editing js/fahi-config.js:
+   <script>window.__FAHI_CONFIG__ = { firebase: { apiKey: "...", ... } };</script>

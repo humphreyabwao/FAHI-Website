@@ -1,0 +1,115 @@
+<header id="site-header" class="site-header" role="banner">
+  <!-- Tier 1: smooth height collapse via CSS grid; tier 2 stays pinned -->
+  <div class="site-header__tier1">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a href="__ROOT__" class="brand" aria-label="FAHI — Home">
+          <span class="brand__mark">
+            <img src="__ROOT__assets/images/logo.png" alt="" aria-hidden="true" />
+          </span>
+          <span class="brand__name">
+            <span class="brand__name-full">First American Health Institute</span>
+            <span class="brand__name-short">FAHI</span>
+          </span>
+        </a>
+
+        <div class="topbar__actions">
+          <ul class="socials" aria-label="Social media">
+          <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
+
+          <div class="topbar__logins" aria-label="Admin login">
+            <a href="__ROOT__admin/" class="login-icon login-icon--admin" aria-label="Staff content" title="Staff content">
+              <i class="fa-solid fa-user-shield"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tier 2: primary navigation -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <div class="nav__mobile-logins" aria-label="Admin login">
+        <a href="__ROOT__admin/" class="login-icon login-icon--admin" aria-label="Staff content" title="Staff content">
+          <i class="fa-solid fa-user-shield"></i>
+        </a>
+      </div>
+
+      <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="primary-menu">
+        <li class="nav__item">
+          <a href="__ROOT__" class="nav__link">Home</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="__ROOT__about/" class="nav__link">About</a>
+        </li>
+
+        <li class="nav__item nav__item--has-sub nav__item--mega">
+          <a href="__ROOT__#programs" class="nav__link nav__link--toggle" aria-haspopup="true" aria-expanded="false">
+            Programs <i class="fa-solid fa-chevron-down nav__chev"></i>
+          </a>
+          <div class="mega" role="region" aria-label="Programs">
+            <div class="container mega__inner">
+              <div
+                id="mega-programs-mount"
+                class="mega__grid mega__grid--dynamic"
+                data-programs-json="__ROOT__data/programs.json"
+                data-programs-base="__ROOT__programs/"
+              >
+                <p class="mega__program-placeholder">Loading programmes…</p>
+              </div>
+
+              <div class="mega__cta">
+                <span class="mega__cta-text">Explore our current training pathways</span>
+                <a href="__ROOT__programs/" class="btn btn--primary btn--sm">
+                  <i class="fa-solid fa-list"></i> Browse all programmes
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav__item nav__item--has-sub">
+          <a href="__ROOT__international-pathways/" class="nav__link nav__link--toggle" aria-haspopup="true" aria-expanded="false">
+            International Pathways <i class="fa-solid fa-chevron-down nav__chev"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="__ROOT__international-pathways/#staffing-solutions">Staffing Solutions</a></li>
+            <li><a href="__ROOT__international-pathways/#home-based-care">Home-Based Care</a></li>
+            <li><a href="__ROOT__international-pathways/#usa-consultation">USA Consultation</a></li>
+            <li><a href="__ROOT__international-pathways/#specialized-training">Specialized Training</a></li>
+            <li><a href="__ROOT__global-nursing-career-pathway/">Global Nursing Career Pathway</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item nav__item--has-sub">
+          <a href="__ROOT__admissions/" class="nav__link nav__link--toggle" aria-haspopup="true" aria-expanded="false">
+            Admissions <i class="fa-solid fa-chevron-down nav__chev"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="__ROOT__admissions/#how-to-apply">How to Apply</a></li>
+            <li><a href="__ROOT__admissions/#entry-requirements">Entry Requirements</a></li>
+            <li><a href="__ROOT__admissions/#fees-scholarships">Fees &amp; Scholarships</a></li>
+            <li><a href="__ROOT__apply/">Apply online</a></li>
+          </ul>
+        </li>
+
+        <li class="nav__item"><a href="__ROOT__student-life/#student-experience" class="nav__link">Student Life</a></li>
+        <li class="nav__item"><a href="__ROOT__student-life/#campuses" class="nav__link">Campuses</a></li>
+        <li class="nav__item"><a href="__ROOT__careers/" class="nav__link">Careers</a></li>
+        <li class="nav__item"><a href="__ROOT__#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div id="site-header-spacer" class="site-header-spacer" aria-hidden="true"></div>

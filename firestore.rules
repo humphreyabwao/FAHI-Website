@@ -1,0 +1,313 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function nonEmptyStr(s, max) {
+      return s is string && s.size() > 0 && s.size() <= max;
+    }
+
+    /**
+     * Staff who may edit programmes and site copy (see /admin/).
+     * Option A: Firebase Console → Authentication → user → Custom claims → {"admin": true}
+     * Option B: Firestore document config/admins with field emails: ["you@school.org", ...]
+     * (create that doc in Console; it is not readable from the client.)
+     */
+    function isContentAdmin() {
+      return request.auth != null
+        && request.auth.token.email is string
+        && (
+          request.auth.token.admin == true
+          || (
+            exists(/databases/$(database)/documents/config/admins)
+            && get(/databases/$(database)/documents/config/admins).data.emails is list
+            && request.auth.token.email in get(/databases/$(database)/documents/config/admins).data.emails
+          )
+        );
+    }
+
+    function validProgramSlug(s) {
+      return s is string
+        && s.size() >= 2
+        && s.size() <= 80
+        && s.matches('^[a-z0-9]+(-[a-z0-9]+)*$');
+    }
+
+    /** Minimal shape check — admins are trusted for remaining fields */
+    function programWritePayload(data, slugId) {
+      return data is map
+        && data.keys().size() <= 80
+        && data.slug == slugId
+        && data.title is string
+        && data.title.size() > 0
+        && data.title.size() <= 400;
+    }
+
+    /** Homepage snippets edited from /admin/ (see js/site-public-home.mjs) */
+    function sitePublicPayload(p) {
+      return p is map
+        && p.keys().hasOnly(["heroEyebrow", "heroSubtitle", "ctaApplyLabel", "ctaProgramsLabel"])
+        && p.heroEyebrow is string
+        && p.heroEyebrow.size() <= 800
+        && p.heroSubtitle is string
+        && p.heroSubtitle.size() <= 2200
+        && p.ctaApplyLabel is string
+        && p.ctaApplyLabel.size() <= 120
+        && p.ctaProgramsLabel is string
+        && p.ctaProgramsLabel.size() <= 120;
+    }
+
+    /** About page team (instructors, tutors, in-house staff) — edited from /admin/ */
+    function validTeamMemberId(s) {
+      return s is string
+        && s.size() >= 2
+        && s.size() <= 80
+        && s.matches('^[a-z0-9]+(-[a-z0-9]+)*$');
+    }
+
+    function validTeamImagePublicId(s) {
+      return s is string
+        && s.size() <= 500
+        && (s.size() == 0 || s.matches('^[a-zA-Z0-9/_.-]+$'));
+    }
+
+    function teamMemberPayload(d) {
+      return d is map
+        && d.keys().hasOnly([
+          "category",
+          "sortOrder",
+          "name",
+          "role",
+          "bio",
+          "imageUrl",
+          "imageAlt",
+          "imagePublicId",
+          "imageVersion"
+        ])
+        && d.category in ["instructor", "tutor", "staff"]
+        && d.name is string
+        && d.name.size() > 0
+        && d.name.size() <= 220
+        && d.role is string
+        && d.role.size() <= 400
+        && d.bio is string
+        && d.bio.size() <= 12000
+        && d.imageUrl is string
+        && d.imageUrl.size() <= 800
+        && d.imageAlt is string
+        && d.imageAlt.size() <= 280
+        && validTeamImagePublicId(d.imagePublicId)
+        && d.imageVersion is int
+        && d.imageVersion >= 0
+        && d.imageVersion <= 9999999999999999
+        && d.sortOrder is int
+        && d.sortOrder >= 0
+        && d.sortOrder <= 999999;
+    }
+
+    /** Open roles on /careers/ — edited from /admin/ or Console */
+    function careerPostingPayload(data, slugId) {
+      return data is map
+        && data.keys().hasOnly([
+          "slug",
+          "title",
+          "summary",
+          "description",
+          "department",
+          "location",
+          "employmentType",
+          "sortOrder",
+          "active"
+        ])
+        && data.slug == slugId
+        && nonEmptyStr(data.title, 200)
+        && data.summary is string
+        && data.summary.size() <= 800
+        && data.description is string
+        && data.description.size() <= 12000
+        && data.department is string
+        && data.department.size() <= 120
+        && data.location is string
+        && data.location.size() <= 120
+        && data.employmentType is string
+        && data.employmentType.size() <= 80
+        && data.sortOrder is int
+        && data.sortOrder >= 0
+        && data.sortOrder <= 999999
+        && data.active is bool;
+    }
+
+    /** /careers/ application form — anonymous auth + create only */
+    function careerApplicationCreate(data) {
+      return data is map
+        && data.keys().hasOnly([
+          "careerSlug",
+          "careerTitle",
+          "fullName",
+          "email",
+          "phone",
+          "coverLetter",
+          "resumeUrl",
+          "resumeFileName",
+          "source",
+          "submittedFromPath",
+          "submittedAt",
+          "submitterUid"
+        ])
+        && data.source == "careers-page"
+        && validProgramSlug(data.careerSlug)
+        && nonEmptyStr(data.careerTitle, 220)
+        && nonEmptyStr(data.fullName, 200)
+        && nonEmptyStr(data.email, 320)
+        && nonEmptyStr(data.phone, 80)
+        && nonEmptyStr(data.coverLetter, 8000)
+        && data.resumeUrl is string
+        && data.resumeUrl.size() <= 1500
+        && data.resumeFileName is string
+        && data.resumeFileName.size() <= 200
+        && data.submittedFromPath is string
+        && data.submittedFromPath.size() <= 400;
+    }
+
+    /** International pathways booking form payload (see international-pathways/index.html) */
+    function pathwaysBookingPayload(p) {
+      return p is map
+        && p.keys().hasOnly([
+          "serviceArea",
+          "requestType",
+          "fullName",
+          "email",
+          "phone",
+          "location",
+          "category",
+          "details"
+        ])
+        && nonEmptyStr(p.serviceArea, 120)
+        && nonEmptyStr(p.requestType, 120)
+        && nonEmptyStr(p.fullName, 200)
+        && nonEmptyStr(p.email, 320)
+        && nonEmptyStr(p.phone, 80)
+        && nonEmptyStr(p.location, 240)
+        && p.category is string
+        && p.category.size() <= 400
+        && nonEmptyStr(p.details, 16000);
+    }
+
+    match /config/admins {
+      allow read, write: if false;
+    }
+
+    // Programme catalogue — public read; staff writes via /admin/
+    match /programs/{slug} {
+      allow read: if true;
+      allow create, update: if isContentAdmin()
+        && validProgramSlug(slug)
+        && programWritePayload(request.resource.data, slug);
+      allow delete: if isContentAdmin() && validProgramSlug(slug);
+    }
+
+    // Editable homepage lines (optional doc site/public)
+    match /site/{docId} {
+      allow read: if true;
+      allow create, update: if docId == "public" && isContentAdmin() && sitePublicPayload(request.resource.data);
+      allow delete: if false;
+    }
+
+    // About page — team profiles (public read; staff CRUD via /admin/)
+    match /aboutTeamMembers/{memberId} {
+      allow read: if true;
+      allow create, update: if isContentAdmin()
+        && validTeamMemberId(memberId)
+        && teamMemberPayload(request.resource.data);
+      allow delete: if isContentAdmin() && validTeamMemberId(memberId);
+    }
+
+    // Careers — public read; staff CRUD via /admin/
+    match /careers/{slug} {
+      allow read: if true;
+      allow create, update: if isContentAdmin()
+        && validProgramSlug(slug)
+        && careerPostingPayload(request.resource.data, slug);
+      allow delete: if isContentAdmin() && validProgramSlug(slug);
+    }
+
+    // Career applications from /careers/ — anonymous auth + create only
+    match /careerApplications/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.submitterUid == request.auth.uid
+        && careerApplicationCreate(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    // Home page contact form — anonymous auth + single create
+    match /contactEnquiries/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.submitterUid == request.auth.uid
+        && request.resource.data.keys().hasAll([
+          "fullName",
+          "email",
+          "phone",
+          "subject",
+          "message",
+          "source",
+          "submittedFromPath",
+          "submittedAt",
+          "submitterUid"
+        ])
+        && request.resource.data.keys().size() <= 12
+        && request.resource.data.source == "home-contact-form"
+        && nonEmptyStr(request.resource.data.fullName, 200)
+        && nonEmptyStr(request.resource.data.email, 320)
+        && request.resource.data.phone is string
+        && request.resource.data.phone.size() <= 80
+        && nonEmptyStr(request.resource.data.subject, 160)
+        && nonEmptyStr(request.resource.data.message, 16000)
+        && request.resource.data.submittedFromPath is string
+        && request.resource.data.submittedFromPath.size() <= 400;
+      allow read, update, delete: if false;
+    }
+
+    // International pathways booking — anonymous auth + single create
+    match /pathwaysEnquiries/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.submitterUid == request.auth.uid
+        && request.resource.data.keys().hasAll([
+          "formType",
+          "payload",
+          "source",
+          "submittedFromPath",
+          "submittedAt",
+          "submitterUid"
+        ])
+        && request.resource.data.keys().size() <= 12
+        && request.resource.data.formType == "booking"
+        && request.resource.data.source == "international-pathways-page"
+        && request.resource.data.payload is map
+        && pathwaysBookingPayload(request.resource.data.payload)
+        && request.resource.data.submittedFromPath is string
+        && request.resource.data.submittedFromPath.size() <= 400;
+      allow read, update, delete: if false;
+    }
+
+    // Public applications — created only by signed-in users (anonymous ok)
+    match /applications/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.applicantUid == request.auth.uid
+        && request.resource.data.programSlug is string
+        && request.resource.data.fullName is string
+        && request.resource.data.email is string
+        && request.resource.data.phone is string
+        && request.resource.data.dateOfBirth is string
+        && request.resource.data.gender is string
+        && request.resource.data.county is string
+        && request.resource.data.townOrCity is string
+        && request.resource.data.emergencyContactName is string
+        && request.resource.data.emergencyRelationship is string
+        && request.resource.data.emergencyPhone is string
+        && request.resource.data.paymentMethod is string
+        && request.resource.data.educationSummary is string
+        && request.resource.data.attachments is list
+        && request.resource.data.attachments.size() <= 12;
+      allow read, update, delete: if false;
+    }
+  }
+}

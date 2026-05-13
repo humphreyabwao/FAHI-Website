@@ -1,0 +1,186 @@
+.pathways-page {
+  background: #f8fafc;
+}
+
+.pathways-hero {
+  padding: 3.8rem 0 3.1rem;
+  color: #fff;
+  background:
+    linear-gradient(rgba(11, 47, 74, 0.76), rgba(0, 119, 200, 0.7)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1800&h=1100&fit=crop&q=80&auto=format") center / cover no-repeat;
+}
+
+.pathways-hero__eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pathways-hero__title {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.65rem, 3.8vw, 2.55rem);
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.pathways-hero__lead {
+  margin: 0;
+  max-width: 52rem;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.pathways-section {
+  padding: 2.35rem 0;
+  border-top: 1px solid #edf2f7;
+}
+
+.pathways-section--soft {
+  background: #fff;
+}
+
+.pathways-section__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  color: #0b2f4a;
+  font-weight: 800;
+}
+
+.pathways-section__lead {
+  margin: 0 0 0.6rem;
+  max-width: 56rem;
+  font-size: 0.94rem;
+  line-height: 1.66;
+  color: #334155;
+}
+
+.pathways-list {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pathways-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.58;
+  color: #334155;
+}
+
+.pathways-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.12rem;
+  top: 0.62rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #94a3b8;
+}
+
+.pathways-form-wrap {
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.95rem 0.9rem 1rem;
+}
+
+.pathways-form-wrap__title {
+  margin: 0 0 0.7rem;
+  font-size: 0.96rem;
+  color: #0b2f4a;
+}
+
+.pathways-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.pathways-form label {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.pathways-form label span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.pathways-form input,
+.pathways-form select,
+.pathways-form textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.62rem 0.72rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: #0f172a;
+  background: #fff;
+}
+
+.pathways-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.pathways-form input:focus,
+.pathways-form select:focus,
+.pathways-form textarea:focus {
+  outline: none;
+  border-color: #0077c8;
+  box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.11);
+}
+
+.pathways-note {
+  margin: 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 0.82rem;
+  color: #334155;
+}
+
+.pathways-form__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pathways-form__status {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.pathways-form__status.is-error {
+  color: #991b1b;
+}
+
+.pathways-form__status.is-success {
+  color: #065f46;
+}
+
+@media (max-width: 900px) {
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+}

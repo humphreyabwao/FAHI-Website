@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Apply Online | FAHI Programme Application | First American Health Institute</title>
+  <meta
+    name="description"
+    content="Submit one online application for any FAHI programme in Kenya. Upload documents, select your course, and complete admissions steps with guided form support."
+  />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="geo.region" content="KE" />
+  <link rel="canonical" href="https://firstamericanhealthinstitute.org/apply/" />
+  <meta property="og:locale" content="en_KE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="First American Health Institute" />
+  <meta property="og:title" content="Apply Online | FAHI Programme Application | First American Health Institute" />
+  <meta
+    property="og:description"
+    content="Submit one online application for any FAHI programme in Kenya. Upload documents, select your course, and complete admissions steps with guided form support."
+  />
+  <meta property="og:url" content="https://firstamericanhealthinstitute.org/apply/" />
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Apply to healthcare training at FAHI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Apply Online | FAHI Programme Application | First American Health Institute" />
+  <meta
+    name="twitter:description"
+    content="Submit one online application for any FAHI programme in Kenya. Upload documents, select your course, and complete admissions steps with guided form support."
+  />
+  <meta
+    name="twitter:image"
+    content="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+  />
+  <meta name="fa-seo-base" content="https://firstamericanhealthinstitute.org" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://firstamericanhealthinstitute.org/apply/#webpage",
+          "url": "https://firstamericanhealthinstitute.org/apply/",
+          "name": "Apply | FAHI",
+          "description": "Submit one online application for any FAHI programme in Kenya. Upload documents, select your course, and complete admissions steps.",
+          "isPartOf": { "@id": "https://firstamericanhealthinstitute.org/#website" },
+          "about": { "@id": "https://firstamericanhealthinstitute.org/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://firstamericanhealthinstitute.org/" },
+            { "@type": "ListItem", "position": 2, "name": "Apply", "item": "https://firstamericanhealthinstitute.org/apply/" }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/apply-page.css" />
+  <script>
+    window.__FAHI_CONFIG__ = window.__FAHI_CONFIG__ || {};
+    // File uploads — use ONE of the following (leave both empty only if applicants never attach files):
+    //
+    // 1) Signed uploads (recommended for production): deploy Cloud Function `createCloudinarySignature`, then set:
+    //    window.__FAHI_CONFIG__.cloudinarySignatureEndpoint =
+    //      "https://<region>-<project-id>.cloudfunctions.net/createCloudinarySignature";
+    //
+    // 2) Unsigned uploads: preset “fahi uploads” is the default below. Override or set
+    //    cloudinaryUnsignedPreset to "" when you switch to signed-only production uploads.
+    //
+    window.__FAHI_CONFIG__.cloudinarySignatureEndpoint =
+      window.__FAHI_CONFIG__.cloudinarySignatureEndpoint || "";
+    // Cloudinary → Upload presets → “fahi uploads” (Unsigned). API secret stays in Console / server only.
+    if (!("cloudinaryUnsignedPreset" in window.__FAHI_CONFIG__)) {
+      window.__FAHI_CONFIG__.cloudinaryUnsignedPreset = "fahi uploads";
+    }
+    window.__FAHI_CONFIG__.cloudinaryCloudName =
+      window.__FAHI_CONFIG__.cloudinaryCloudName || "dhhoou5mw";
+  </script>
+</head>
+<body class="apply-page" data-site-root="../" data-js-base="../js/" data-programs-json="../data/programs.json">
+  <div id="site-header-mount"></div>
+
+  <main class="apply-main" id="main">
+    <header class="apply-hero">
+      <div class="container">
+        <p class="apply-eyebrow">Admissions</p>
+        <h1 class="apply-title">Programme application</h1>
+        <p class="apply-lead">
+          One form for every FAHI programme. If you opened this page from a course link, your programme is pre-selected below. Complete all sections, add payment reference if you have paid, upload documents, and submit.
+        </p>
+      </div>
+    </header>
+
+    <div class="container apply-body">
+      <form id="fahi-application-form" class="apply-form" novalidate>
+        <p id="apply-prefill-note" class="apply-prefill" role="status" hidden></p>
+
+        <div class="apply-form__layout">
+          <div class="apply-form__col">
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">1. Programme</h2>
+          <label class="apply-label" for="apply-program">Which programme are you applying for? <span class="apply-req" aria-hidden="true">*</span></label>
+          <select id="apply-program" name="programSlug" class="apply-input apply-select" required>
+            <option value="">Select a programme…</option>
+          </select>
+          <div id="apply-program-hint" class="apply-hint" role="status" aria-live="polite" hidden></div>
+        </div>
+
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">2. Personal details</h2>
+          <div class="apply-grid">
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-name">Full name (as on ID) <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-name" name="fullName" type="text" class="apply-input" autocomplete="name" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-email">Email <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-email" name="email" type="email" class="apply-input" autocomplete="email" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-phone">Phone (WhatsApp preferred) <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-phone" name="phone" type="tel" class="apply-input" autocomplete="tel" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-dob">Date of birth <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-dob" name="dateOfBirth" type="date" class="apply-input" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-gender">Gender <span class="apply-req" aria-hidden="true">*</span></label>
+              <select id="apply-gender" name="gender" class="apply-input apply-select" required>
+                <option value="">Select…</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="prefer_not">Prefer not to say</option>
+              </select>
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-nationality">Nationality</label>
+              <input id="apply-nationality" name="nationality" type="text" class="apply-input" autocomplete="country-name" placeholder="e.g. Kenyan" />
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-id-number">National ID or passport number</label>
+              <input id="apply-id-number" name="nationalIdOrPassport" type="text" class="apply-input" autocomplete="off" />
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">3. Address</h2>
+          <div class="apply-grid">
+            <div class="apply-field">
+              <label class="apply-label" for="apply-county">County / region <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-county" name="county" type="text" class="apply-input" required placeholder="e.g. Nairobi" />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-town">Town or city <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-town" name="townOrCity" type="text" class="apply-input" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-postal">Postal code</label>
+              <input id="apply-postal" name="postalCode" type="text" class="apply-input" autocomplete="postal-code" />
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-address">Physical address / estate / landmark (optional)</label>
+              <textarea id="apply-address" name="physicalAddress" class="apply-input apply-textarea" rows="2" placeholder="Street, building, directions"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">4. Emergency contact</h2>
+          <p class="apply-muted">Someone we can reach if we cannot get you on your main number.</p>
+          <div class="apply-grid">
+            <div class="apply-field">
+              <label class="apply-label" for="apply-emergency-name">Contact name <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-emergency-name" name="emergencyContactName" type="text" class="apply-input" required />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-emergency-rel">Relationship to you <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-emergency-rel" name="emergencyRelationship" type="text" class="apply-input" required placeholder="e.g. Parent, spouse" />
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-emergency-phone">Their phone number <span class="apply-req" aria-hidden="true">*</span></label>
+              <input id="apply-emergency-phone" name="emergencyPhone" type="tel" class="apply-input" autocomplete="tel" required />
+            </div>
+          </div>
+        </div>
+          </div>
+
+          <div class="apply-form__col">
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">5. Education &amp; intake</h2>
+          <div class="apply-grid">
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-education">Education &amp; qualifications (summary) <span class="apply-req" aria-hidden="true">*</span></label>
+              <textarea id="apply-education" name="educationSummary" class="apply-input apply-textarea" rows="2" required placeholder="e.g. KCSE grade, prior certificates, work experience"></textarea>
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-kcse">KCSE / equivalent grade (if applicable)</label>
+              <input id="apply-kcse" name="kcseGradeOrEquivalent" type="text" class="apply-input" placeholder="e.g. C+ (plain), Diploma" />
+            </div>
+            <div class="apply-field">
+              <label class="apply-label" for="apply-intake">Preferred intake</label>
+              <select id="apply-intake" name="intendedStart" class="apply-input apply-select">
+                <option value="next">Next advertised intake</option>
+                <option value="later">Later in the year</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-message">Why this programme? (optional)</label>
+              <textarea id="apply-message" name="message" class="apply-input apply-textarea" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-form__section apply-form__section--payment">
+          <h2 class="apply-form__heading">6. Payment / transaction reference</h2>
+          <p class="apply-muted">If you have paid registration or fees, enter your M-Pesa confirmation code, bank reference, or other transaction ID so admissions can match your payment.</p>
+          <div class="apply-grid">
+            <div class="apply-field">
+              <label class="apply-label" for="apply-payment-method">Payment status / method <span class="apply-req" aria-hidden="true">*</span></label>
+              <select id="apply-payment-method" name="paymentMethod" class="apply-input apply-select" required>
+                <option value="not_yet">Not paid yet</option>
+                <option value="mpesa">M-Pesa</option>
+                <option value="bank">Bank transfer</option>
+                <option value="cash">Cash at campus</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-tx-code">M-Pesa / transaction / reference code</label>
+              <input id="apply-tx-code" name="mpesaOrTransactionCode" type="text" class="apply-input" autocomplete="off" placeholder="e.g. M-Pesa confirmation code or bank ref" />
+            </div>
+            <div class="apply-field apply-field--full">
+              <label class="apply-label" for="apply-payment-notes">Payment notes (optional)</label>
+              <textarea id="apply-payment-notes" name="paymentNotes" class="apply-input apply-textarea" rows="2" placeholder="Amount sent, date, sender name on M-Pesa, etc."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-form__section">
+          <h2 class="apply-form__heading">7. Documents</h2>
+          <p class="apply-muted">
+            Upload certificates, transcripts, ID copy, or other evidence. Drag files into the box or click to browse.
+          </p>
+          <div class="apply-upload">
+            <input
+              id="apply-files"
+              name="files"
+              type="file"
+              class="apply-file-input"
+              accept=".pdf,.jpg,.jpeg,.png,application/pdf"
+              multiple
+              tabindex="-1"
+            />
+            <label
+              id="apply-dropzone"
+              class="apply-dropzone"
+              for="apply-files"
+              tabindex="0"
+              aria-describedby="apply-dropzone-help"
+            >
+              <span class="apply-dropzone__icon" aria-hidden="true">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </span>
+              <span class="apply-dropzone__title">Drop files here or <strong>browse</strong></span>
+              <span id="apply-dropzone-help" class="apply-dropzone__hint">PDF, JPG, or PNG · max 10 MB each · up to 8 files</span>
+            </label>
+            <p id="apply-upload-feedback" class="apply-upload-feedback" role="status" aria-live="polite" hidden></p>
+            <ul id="apply-file-list" class="apply-file-list" aria-label="Selected files"></ul>
+          </div>
+        </div>
+
+        <div class="apply-form__section apply-form__section--inline">
+          <label class="apply-check">
+            <input id="apply-consent" name="consent" type="checkbox" required />
+            <span>I confirm the information above is accurate and I agree to FAHI contacting me about this application.</span>
+          </label>
+        </div>
+
+        <div class="apply-actions">
+          <button type="submit" class="btn btn--primary" id="apply-submit">
+            Submit application <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <a href="../programs/" class="btn btn--ghost-blue">Browse programmes</a>
+        </div>
+          </div>
+        </div>
+
+        <p id="apply-form-error" class="apply-error" role="alert" hidden></p>
+        <p id="apply-form-success" class="apply-success" role="status" hidden></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="../js/program-groups.js"></script>
+  <script src="../js/site-chrome.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/mega-menu.js"></script>
+  <script type="module" src="../js/apply-page.mjs"></script>
+</body>
+</html>

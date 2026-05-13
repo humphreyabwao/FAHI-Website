@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Content admin | FAHI</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/admin-console.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    window.__FAHI_CONFIG__ = window.__FAHI_CONFIG__ || {};
+    window.__FAHI_CONFIG__.cloudinarySignatureEndpoint =
+      window.__FAHI_CONFIG__.cloudinarySignatureEndpoint || "";
+    if (!("cloudinaryUnsignedPreset" in window.__FAHI_CONFIG__)) {
+      window.__FAHI_CONFIG__.cloudinaryUnsignedPreset = "fahi uploads";
+    }
+    window.__FAHI_CONFIG__.cloudinaryCloudName =
+      window.__FAHI_CONFIG__.cloudinaryCloudName || "dhhoou5mw";
+  </script>
+</head>
+<body class="admin-page" data-site-root="../" data-js-base="../js/">
+  <div id="admin-login-stage" class="admin-login-stage" aria-label="Staff sign in">
+    <div class="admin-login-card">
+      <header class="admin-login-brand">
+        <div class="admin-login-logo-wrap">
+          <img
+            class="admin-login-logo"
+            src="../assets/images/logo.png"
+            alt="First American Health Institute"
+            width="200"
+            height="72"
+            decoding="async"
+          />
+        </div>
+        <p class="admin-login-kicker">Staff access</p>
+        <h1 class="admin-login-title">FAHI content admin</h1>
+      </header>
+
+      <form id="admin-login-form" class="admin-login-form" novalidate>
+        <label class="admin-label admin-label--login" for="admin-email">Work email</label>
+        <input
+          id="admin-email"
+          class="admin-input admin-input--login"
+          type="email"
+          name="email"
+          autocomplete="username"
+          inputmode="email"
+          required
+        />
+        <label class="admin-label admin-label--login" for="admin-password">Password</label>
+        <input
+          id="admin-password"
+          class="admin-input admin-input--login"
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          required
+        />
+        <button type="submit" class="admin-btn admin-btn--login" id="admin-sign-in">Sign in</button>
+        <p id="admin-login-msg" class="admin-msg admin-login-msg admin-hidden" role="alert"></p>
+      </form>
+
+      <p class="admin-login-footer">
+        <a class="admin-login-back" href="../">← Back to website</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="admin-app" class="admin-app admin-hidden">
+    <div class="admin-shell" id="admin-shell">
+      <header class="admin-topbar">
+        <div class="admin-topbar__start">
+          <button
+            type="button"
+            class="admin-sidebar-toggle"
+            id="admin-sidebar-toggle"
+            aria-controls="admin-sidebar"
+            aria-expanded="true"
+            title="Collapse menu"
+          >
+            <i class="fa-solid fa-angles-left" aria-hidden="true"></i>
+          </button>
+          <div class="admin-topbar__brand">
+            <a class="admin-topbar__logo-link" href="../" title="FAHI website">
+              <img class="admin-topbar__logo" src="../assets/images/logo.png" alt="" width="140" height="48" decoding="async" />
+            </a>
+            <div class="admin-topbar__titles">
+              <span class="admin-topbar__product">Staff portal</span>
+              <span class="admin-topbar__divider" aria-hidden="true"></span>
+              <span class="admin-topbar__page" id="admin-topbar-page-label">Overview</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-topbar__actions">
+          <div class="admin-dropdown">
+            <button
+              type="button"
+              class="admin-icon-btn"
+              id="admin-notify-trigger"
+              aria-label="Notifications"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <i class="fa-regular fa-bell" aria-hidden="true"></i>
+            </button>
+            <div class="admin-dropdown__panel admin-dropdown__panel--wide" id="admin-notify-dropdown" role="menu">
+              <p class="admin-dropdown__empty"><i class="fa-regular fa-bell-slash" aria-hidden="true"></i> No notifications yet.</p>
+              <p class="admin-dropdown__hint">Alerts for new enquiries and applications will appear here when wired up.</p>
+            </div>
+          </div>
+
+          <div class="admin-dropdown">
+            <button
+              type="button"
+              class="admin-profile-trigger"
+              id="admin-profile-trigger"
+              aria-label="Account menu"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <span class="admin-profile-trigger__avatar" id="admin-profile-initial" aria-hidden="true">?</span>
+              <i class="fa-solid fa-chevron-down admin-profile-trigger__chev" aria-hidden="true"></i>
+            </button>
+            <div class="admin-dropdown__panel admin-dropdown__panel--right" id="admin-profile-dropdown" role="menu">
+              <div class="admin-profile-card">
+                <p class="admin-profile-card__label">Signed in</p>
+                <p class="admin-profile-card__email" id="admin-profile-email"></p>
+              </div>
+              <a class="admin-dropdown__link" href="../"><i class="fa-solid fa-house" aria-hidden="true"></i> Back to website</a>
+              <button type="button" class="admin-dropdown__btn" id="admin-sign-out">
+                <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i> Sign out
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="admin-shell__body">
+        <aside class="admin-sidebar" id="admin-sidebar" aria-label="Data feeds">
+          <div
+            class="admin-sidebar__pulse"
+            id="admin-live-wrap"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-label=""
+            title=""
+          >
+            <span class="admin-live-dot" id="admin-live-dot" aria-hidden="true"></span>
+          </div>
+          <p class="admin-sidebar__section-title">Live catalogue</p>
+          <nav class="admin-nav" aria-label="Firestore modules">
+            <button type="button" class="admin-nav__btn admin-nav__btn--simple is-active" data-admin-nav="dashboard" aria-current="page">
+              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+              <span class="admin-nav__label">Overview</span>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="programs">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+              <span class="admin-nav__label">Programmes</span>
+              <code class="admin-nav__path">programs</code>
+              <span class="admin-nav__count" id="admin-count-programs">—</span>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="team">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <span class="admin-nav__label">About team</span>
+              <code class="admin-nav__path">aboutTeamMembers</code>
+              <span class="admin-nav__count" id="admin-count-team">—</span>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="careers">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              <span class="admin-nav__label">Careers</span>
+              <code class="admin-nav__path">careers</code>
+              <span class="admin-nav__count" id="admin-count-careers">—</span>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="homepage">
+              <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+              <span class="admin-nav__label">Homepage copy</span>
+              <code class="admin-nav__path">site/public</code>
+              <span class="admin-nav__count" id="admin-count-site">—</span>
+            </button>
+          </nav>
+
+          <p class="admin-sidebar__section-title">Inbound (browser read off)</p>
+          <nav class="admin-nav admin-nav--sub" aria-label="Restricted collections">
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-careers">
+              <i class="fa-solid fa-inbox" aria-hidden="true"></i>
+              <span class="admin-nav__label">Career applications</span>
+              <code class="admin-nav__path">careerApplications</code>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-contact">
+              <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+              <span class="admin-nav__label">Contact enquiries</span>
+              <code class="admin-nav__path">contactEnquiries</code>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-pathways">
+              <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
+              <span class="admin-nav__label">Pathways enquiries</span>
+              <code class="admin-nav__path">pathwaysEnquiries</code>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-apply">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              <span class="admin-nav__label">Apply submissions</span>
+              <code class="admin-nav__path">applications</code>
+            </button>
+          </nav>
+        </aside>
+
+        <main class="admin-main">
+          <div class="admin-module is-active" data-admin-module="dashboard">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Overview</h1>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="programs">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Programmes</h1>
+              <p class="admin-module__lead"><code>programs</code> · public catalogue</p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Editor and JSON tools will live here.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="team">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">About team</h1>
+              <p class="admin-module__lead"><code>aboutTeamMembers</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Team directory CMS will live here.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="careers">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Careers</h1>
+              <p class="admin-module__lead"><code>careers</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Role postings editor will live here.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="homepage">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Homepage copy</h1>
+              <p class="admin-module__lead"><code>site/public</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Hero and CTA fields will live here.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="inbox-careers">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Career applications</h1>
+              <p class="admin-module__lead"><code>careerApplications</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Requires secure staff read (rules or backend) before listing submissions.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="inbox-contact">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Contact enquiries</h1>
+              <p class="admin-module__lead"><code>contactEnquiries</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Inbox UI will connect once staff read access is defined.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="inbox-pathways">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Pathways enquiries</h1>
+              <p class="admin-module__lead"><code>pathwaysEnquiries</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Booking requests will appear here after backend wiring.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="inbox-apply">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Apply submissions</h1>
+              <p class="admin-module__lead"><code>applications</code></p>
+            </div>
+            <div class="admin-placeholder">
+              <p class="admin-placeholder__title">Module not implemented</p>
+              <p class="admin-placeholder__text">Application review tools will live here.</p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/admin-console.mjs"></script>
+</body>
+</html>

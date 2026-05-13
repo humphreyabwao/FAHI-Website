@@ -1,0 +1,37 @@
+{
+  "careers": [
+    {
+      "slug": "clinical-skills-lab-coordinator",
+      "title": "Clinical Skills Lab Coordinator",
+      "summary": "Support hands-on nursing and allied-health skills training across FAHI learning centres.",
+      "description": "We are looking for a coordinator to prepare lab sessions, maintain equipment, and support instructors during skills assessments. Experience in simulation or skills lab environments is an advantage.",
+      "department": "Academics",
+      "location": "Nairobi, Kenya",
+      "employmentType": "Full-time",
+      "sortOrder": 10,
+      "active": true
+    },
+    {
+      "slug": "admissions-support-officer",
+      "title": "Admissions Support Officer",
+      "summary": "Help prospective students complete applications and understand programme pathways.",
+      "description": "Join the admissions team to respond to enquiries, guide applicants through online forms, and coordinate with campus administrators. Strong written and spoken English and Kiswahili preferred.",
+      "department": "Admissions",
+      "location": "Hybrid — Kenya",
+      "employmentType": "Full-time",
+      "sortOrder": 20,
+      "active": true
+    },
+    {
+      "slug": "learning-management-system-assistant",
+      "title": "LMS & Digital Learning Assistant",
+      "summary": "Support hybrid and online learners with LMS access, schedules, and basic technical help.",
+      "description": "Assist tutors and students with the learning platform, track attendance records, and escalate technical issues. Familiarity with Moodle or similar LMS tools is helpful.",
+      "department": "Academic Technology",
+      "location": "Mombasa, Kenya",
+      "employmentType": "Part-time",
+      "sortOrder": 30,
+      "active": true
+    }
+  ]
+}

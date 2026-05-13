@@ -1,0 +1,17 @@
+{
+  "name": "fahi-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed:programs": "node tools/seed-programs.mjs",
+    "seed:about-team": "node tools/seed-about-team.mjs",
+    "seed:careers": "node tools/seed-careers.mjs",
+    "firebase:deploy": "firebase deploy",
+    "firebase:hosting": "firebase deploy --only hosting",
+    "firebase:functions": "firebase deploy --only functions",
+    "firebase:rules": "firebase deploy --only firestore:rules,storage"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0"
+  }
+}
