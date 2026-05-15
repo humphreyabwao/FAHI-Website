@@ -74,7 +74,7 @@ const MODULE_TITLES = {
   programs: "Programmes",
   team: "About team",
   careers: "Careers",
-  homepage: "Homepage copy",
+  homepage: "Homepage & marketing",
   "inbox-careers": "Career applications",
   "inbox-contact": "Contact enquiries",
   "inbox-pathways": "Pathways enquiries",

@@ -33,6 +33,33 @@
   line-height: 1.45;
 }
 
+.admin-head-note {
+  margin: -0.35rem 0 0.75rem;
+  font-size: 0.8rem;
+  color: var(--gray-600, #475569);
+  line-height: 1.45;
+}
+
+.admin-upload-status {
+  margin: 0.15rem 0 0.65rem;
+  min-height: 1.25em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray-600, #475569);
+}
+
+.admin-upload-status--ok {
+  color: #166534;
+}
+
+.admin-upload-status--err {
+  color: #b91c1c;
+}
+
+.admin-row--marquee-upload {
+  margin-bottom: 0.15rem;
+}
+
 .admin-panel {
   background: #fff;
   border: 1px solid var(--gray-200, #e2e8f0);

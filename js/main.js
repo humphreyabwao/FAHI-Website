@@ -364,4 +364,49 @@
     window.addEventListener("resize", updateArrows);
     updateArrows();
   }
+
+  /* ============================================================
+     Our courses — mobile (≤640px): first 6 tabs (2×3), “View all”
+  ============================================================ */
+  const courseTabsOuter = document.getElementById("course-tabs-nav-outer");
+  const courseTabsList = document.getElementById("course-tabs-nav-list");
+  const courseTabsToggle = document.getElementById("course-tabs-view-all");
+
+  if (courseTabsOuter && courseTabsList && courseTabsToggle) {
+    const mqMobile = window.matchMedia("(max-width: 640px)");
+    const MAX_VISIBLE = 6;
+    const label = courseTabsToggle.querySelector(".course-tabs-band__view-all-text");
+
+    function syncCourseTabsCollapse() {
+      const count = courseTabsList.querySelectorAll(":scope > li").length;
+      const needs = mqMobile.matches && count > MAX_VISIBLE;
+      courseTabsToggle.classList.toggle("is-visible", needs);
+      courseTabsToggle.setAttribute("aria-hidden", needs ? "false" : "true");
+      courseTabsToggle.tabIndex = needs ? 0 : -1;
+      if (!needs) {
+        courseTabsOuter.classList.remove("is-expanded");
+        courseTabsToggle.setAttribute("aria-expanded", "false");
+        if (label) label.textContent = "View all";
+      }
+    }
+
+    courseTabsToggle.addEventListener("click", () => {
+      if (!courseTabsToggle.classList.contains("is-visible")) return;
+      const next = !courseTabsOuter.classList.contains("is-expanded");
+      courseTabsOuter.classList.toggle("is-expanded", next);
+      courseTabsToggle.setAttribute("aria-expanded", next ? "true" : "false");
+      if (label) label.textContent = next ? "Show less" : "View all";
+      if (!next) {
+        courseTabsOuter.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    });
+
+    if (typeof mqMobile.addEventListener === "function") {
+      mqMobile.addEventListener("change", syncCourseTabsCollapse);
+    } else {
+      mqMobile.addListener(syncCourseTabsCollapse);
+    }
+    window.addEventListener("resize", syncCourseTabsCollapse);
+    syncCourseTabsCollapse();
+  }
 })();

@@ -45,7 +45,20 @@ service cloud.firestore {
     /** Homepage snippets edited from /admin/ (see js/site-public-home.mjs) */
     function sitePublicPayload(p) {
       return p is map
-        && p.keys().hasOnly(["heroEyebrow", "heroSubtitle", "ctaApplyLabel", "ctaProgramsLabel"])
+        && p.keys().hasOnly([
+          "heroEyebrow",
+          "heroSubtitle",
+          "ctaApplyLabel",
+          "ctaProgramsLabel",
+          "courseMarqueeEyebrow",
+          "courseMarqueeHeading",
+          "courseMarqueeBody",
+          "courseMarqueeCtaLabel",
+          "courseMarqueeCtaHref",
+          "courseMarqueeImageUrl",
+          "courseMarqueeImageAlt",
+          "courseMarqueeEnabled"
+        ])
         && p.heroEyebrow is string
         && p.heroEyebrow.size() <= 800
         && p.heroSubtitle is string
@@ -53,7 +66,22 @@ service cloud.firestore {
         && p.ctaApplyLabel is string
         && p.ctaApplyLabel.size() <= 120
         && p.ctaProgramsLabel is string
-        && p.ctaProgramsLabel.size() <= 120;
+        && p.ctaProgramsLabel.size() <= 120
+        && (!p.keys().hasAny(["courseMarqueeEyebrow"])
+          || (p.courseMarqueeEyebrow is string && p.courseMarqueeEyebrow.size() <= 200))
+        && (!p.keys().hasAny(["courseMarqueeHeading"])
+          || (p.courseMarqueeHeading is string && p.courseMarqueeHeading.size() <= 400))
+        && (!p.keys().hasAny(["courseMarqueeBody"])
+          || (p.courseMarqueeBody is string && p.courseMarqueeBody.size() <= 1200))
+        && (!p.keys().hasAny(["courseMarqueeCtaLabel"])
+          || (p.courseMarqueeCtaLabel is string && p.courseMarqueeCtaLabel.size() <= 120))
+        && (!p.keys().hasAny(["courseMarqueeCtaHref"])
+          || (p.courseMarqueeCtaHref is string && p.courseMarqueeCtaHref.size() <= 800))
+        && (!p.keys().hasAny(["courseMarqueeImageUrl"])
+          || (p.courseMarqueeImageUrl is string && p.courseMarqueeImageUrl.size() <= 1500))
+        && (!p.keys().hasAny(["courseMarqueeImageAlt"])
+          || (p.courseMarqueeImageAlt is string && p.courseMarqueeImageAlt.size() <= 400))
+        && (!p.keys().hasAny(["courseMarqueeEnabled"]) || p.courseMarqueeEnabled is bool);
     }
 
     /** About page team (instructors, tutors, in-house staff) — edited from /admin/ */

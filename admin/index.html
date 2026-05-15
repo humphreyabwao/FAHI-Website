@@ -179,7 +179,7 @@
             </button>
             <button type="button" class="admin-nav__btn" data-admin-nav="homepage">
               <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
-              <span class="admin-nav__label">Homepage copy</span>
+              <span class="admin-nav__label">Homepage &amp; marketing</span>
               <code class="admin-nav__path">site/public</code>
               <span class="admin-nav__count" id="admin-count-site">—</span>
             </button>
@@ -252,13 +252,87 @@
 
           <div class="admin-module" data-admin-module="homepage">
             <div class="admin-module__header">
-              <h1 class="admin-module__title">Homepage copy</h1>
-              <p class="admin-module__lead"><code>site/public</code></p>
+              <h1 class="admin-module__title">Homepage &amp; marketing</h1>
+              <p class="admin-module__lead">
+                Single document <code>site/public</code> — hero copy and the “Our courses” promo strip (realtime on the live site).
+              </p>
             </div>
-            <div class="admin-placeholder">
-              <p class="admin-placeholder__title">Module not implemented</p>
-              <p class="admin-placeholder__text">Hero and CTA fields will live here.</p>
+
+            <div class="admin-panel">
+              <h2>Hero</h2>
+              <label class="admin-label" for="admin-site-hero-eyebrow">Eyebrow</label>
+              <input id="admin-site-hero-eyebrow" class="admin-input" type="text" maxlength="800" autocomplete="off" />
+
+              <label class="admin-label" for="admin-site-hero-subtitle">Subtitle</label>
+              <textarea id="admin-site-hero-subtitle" class="admin-textarea admin-textarea--bio" maxlength="2200"></textarea>
+
+              <div class="admin-grid">
+                <div>
+                  <label class="admin-label" for="admin-site-cta-apply">Primary CTA label</label>
+                  <input id="admin-site-cta-apply" class="admin-input" type="text" maxlength="120" autocomplete="off" />
+                </div>
+                <div>
+                  <label class="admin-label" for="admin-site-cta-programs">Secondary CTA label</label>
+                  <input id="admin-site-cta-programs" class="admin-input" type="text" maxlength="120" autocomplete="off" />
+                </div>
+              </div>
             </div>
+
+            <div class="admin-panel">
+              <h2>Our courses — marketing strip</h2>
+              <p class="admin-head-note">
+                Shown under programme tabs on the homepage. Use HTTPS image URLs (or your CDN). CTA href can be a path such as
+                <code>apply/</code>.
+              </p>
+
+              <label class="admin-label admin-label--inline">
+                <input type="checkbox" id="admin-course-marquee-enabled" checked />
+                Show strip on homepage
+              </label>
+
+              <label class="admin-label" for="admin-course-marquee-eyebrow">Eyebrow (e.g. Next intake)</label>
+              <input id="admin-course-marquee-eyebrow" class="admin-input" type="text" maxlength="200" autocomplete="off" />
+
+              <label class="admin-label" for="admin-course-marquee-heading">Headline</label>
+              <input id="admin-course-marquee-heading" class="admin-input" type="text" maxlength="400" autocomplete="off" />
+
+              <label class="admin-label" for="admin-course-marquee-body">Supporting line</label>
+              <textarea id="admin-course-marquee-body" class="admin-textarea admin-textarea--short" maxlength="1200"></textarea>
+
+              <div class="admin-grid">
+                <div>
+                  <label class="admin-label" for="admin-course-marquee-cta-label">Button label</label>
+                  <input id="admin-course-marquee-cta-label" class="admin-input" type="text" maxlength="120" autocomplete="off" />
+                </div>
+                <div>
+                  <label class="admin-label" for="admin-course-marquee-cta-href">Button link (href)</label>
+                  <input id="admin-course-marquee-cta-href" class="admin-input" type="text" maxlength="800" autocomplete="off" />
+                </div>
+              </div>
+
+              <label class="admin-label" for="admin-course-marquee-image-file">Image — upload to Cloudinary</label>
+              <div class="admin-row admin-row--marquee-upload">
+                <input
+                  id="admin-course-marquee-image-file"
+                  class="admin-file"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                  aria-describedby="admin-course-marquee-image-upload-status"
+                />
+              </div>
+              <p id="admin-course-marquee-image-upload-status" class="admin-upload-status" role="status"></p>
+
+              <label class="admin-label" for="admin-course-marquee-image-url">Image URL</label>
+              <input id="admin-course-marquee-image-url" class="admin-input" type="url" maxlength="1500" autocomplete="off" />
+
+              <label class="admin-label" for="admin-course-marquee-image-alt">Image alt text</label>
+              <input id="admin-course-marquee-image-alt" class="admin-input" type="text" maxlength="400" autocomplete="off" />
+            </div>
+
+            <div class="admin-row">
+              <button type="button" class="admin-btn" id="admin-homepage-save">Save to Firestore</button>
+            </div>
+            <p id="admin-homepage-msg" class="admin-msg admin-hidden" role="status"></p>
           </div>
 
           <div class="admin-module" data-admin-module="inbox-careers">
@@ -310,5 +384,6 @@
   </div>
 
   <script type="module" src="../js/admin-console.mjs"></script>
+  <script type="module" src="../js/admin-homepage.mjs"></script>
 </body>
 </html>
