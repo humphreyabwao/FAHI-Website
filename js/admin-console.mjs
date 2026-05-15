@@ -75,7 +75,10 @@ const MODULE_TITLES = {
   team: "About team",
   careers: "Careers",
   homepage: "Homepage & marketing",
+  "lease-equipment": "Lease equipment",
   "inbox-careers": "Career applications",
+  "inbox-homecare": "Home care bookings",
+  "inbox-lease": "Equipment lease requests",
   "inbox-contact": "Contact enquiries",
   "inbox-pathways": "Pathways enquiries",
   "inbox-apply": "Apply submissions",
@@ -105,6 +108,7 @@ function initShellNav() {
       if (key) {
         closeAllDropdowns();
         activate(key);
+        if (isMobileAdminNav()) closeMobileAdminSidebar();
       }
     });
   });
@@ -151,39 +155,109 @@ function initTopBarDropdowns() {
 }
 
 const SIDEBAR_COLLAPSE_KEY = "fahi-admin-sidebar-collapsed";
+const mqMobileNav = window.matchMedia("(max-width: 900px)");
+
+function isMobileAdminNav() {
+  return mqMobileNav.matches;
+}
+
+function closeMobileAdminSidebar() {
+  const shell = $("admin-shell");
+  const btn = $("admin-sidebar-toggle");
+  const backdrop = $("admin-sidebar-backdrop");
+  if (!shell) return;
+  shell.classList.remove("admin-sidebar-open");
+  document.body.classList.remove("admin-nav-open");
+  backdrop?.setAttribute("hidden", "");
+  backdrop?.setAttribute("aria-hidden", "true");
+  if (btn) {
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Open menu");
+    btn.title = "Open menu";
+    const icon = btn.querySelector("i");
+    if (icon) icon.className = "fa-solid fa-bars";
+  }
+}
+
+function openMobileAdminSidebar() {
+  const shell = $("admin-shell");
+  const btn = $("admin-sidebar-toggle");
+  const backdrop = $("admin-sidebar-backdrop");
+  if (!shell) return;
+  closeAllDropdowns();
+  shell.classList.add("admin-sidebar-open");
+  document.body.classList.add("admin-nav-open");
+  backdrop?.removeAttribute("hidden");
+  backdrop?.setAttribute("aria-hidden", "false");
+  if (btn) {
+    btn.setAttribute("aria-expanded", "true");
+    btn.setAttribute("aria-label", "Close menu");
+    btn.title = "Close menu";
+    const icon = btn.querySelector("i");
+    if (icon) icon.className = "fa-solid fa-xmark";
+  }
+}
+
+function applyDesktopSidebarCollapse(collapsed) {
+  const shell = $("admin-shell");
+  const btn = $("admin-sidebar-toggle");
+  if (!shell || !btn) return;
+  shell.classList.remove("admin-sidebar-open");
+  shell.classList.toggle("admin-sidebar-collapsed", collapsed);
+  btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+  btn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+  btn.title = collapsed ? "Expand menu" : "Collapse menu";
+  const icon = btn.querySelector("i");
+  if (icon) {
+    icon.className = collapsed ? "fa-solid fa-angles-right" : "fa-solid fa-angles-left";
+  }
+  try {
+    localStorage.setItem(SIDEBAR_COLLAPSE_KEY, collapsed ? "1" : "0");
+  } catch (_) {
+    /* ignore */
+  }
+}
 
 function initSidebarToggle() {
   const shell = $("admin-shell");
   const btn = $("admin-sidebar-toggle");
+  const backdrop = $("admin-sidebar-backdrop");
   if (!shell || !btn) return;
 
-  const icon = btn.querySelector("i");
-
-  const apply = (collapsed) => {
-    shell.classList.toggle("admin-sidebar-collapsed", collapsed);
-    btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
-    btn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
-    btn.title = collapsed ? "Expand menu" : "Collapse menu";
-    if (icon) {
-      icon.className = collapsed ? "fa-solid fa-angles-right" : "fa-solid fa-angles-left";
-    }
-    try {
-      localStorage.setItem(SIDEBAR_COLLAPSE_KEY, collapsed ? "1" : "0");
-    } catch (_) {
-      /* ignore */
+  const syncNavMode = () => {
+    if (isMobileAdminNav()) {
+      shell.classList.remove("admin-sidebar-collapsed");
+      closeMobileAdminSidebar();
+    } else {
+      closeMobileAdminSidebar();
+      let startCollapsed = false;
+      try {
+        startCollapsed = localStorage.getItem(SIDEBAR_COLLAPSE_KEY) === "1";
+      } catch (_) {
+        /* ignore */
+      }
+      applyDesktopSidebarCollapse(startCollapsed);
     }
   };
 
-  let startCollapsed = false;
-  try {
-    startCollapsed = localStorage.getItem(SIDEBAR_COLLAPSE_KEY) === "1";
-  } catch (_) {
-    /* ignore */
-  }
-  apply(startCollapsed);
+  syncNavMode();
+  mqMobileNav.addEventListener("change", syncNavMode);
 
   btn.addEventListener("click", () => {
-    apply(!shell.classList.contains("admin-sidebar-collapsed"));
+    if (isMobileAdminNav()) {
+      if (shell.classList.contains("admin-sidebar-open")) closeMobileAdminSidebar();
+      else openMobileAdminSidebar();
+      return;
+    }
+    applyDesktopSidebarCollapse(!shell.classList.contains("admin-sidebar-collapsed"));
+  });
+
+  backdrop?.addEventListener("click", () => closeMobileAdminSidebar());
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && shell.classList.contains("admin-sidebar-open")) {
+      closeMobileAdminSidebar();
+    }
   });
 }
 

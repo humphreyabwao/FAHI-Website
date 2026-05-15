@@ -29,11 +29,11 @@ function setMarqueeUploadStatus(el, text, kind) {
 
 /** Defaults align with index.html static fallbacks when no doc exists yet. */
 const SITE_PUBLIC_DEFAULTS = {
-  heroEyebrow: "Your Future in Healthcare Starts Here",
+  heroEyebrow: "First American Health Institute · Kenya",
   heroSubtitle:
-    "Holistic training grounded in physiology, caring, compassion and opportunity for all — locally and internationally.",
-  ctaApplyLabel: "Apply Now",
-  ctaProgramsLabel: "Explore Our Programs",
+    "FAHI is more than a training college — we educate healthcare professionals, deliver trusted home-based care for families, and connect talent with employers across Kenya and abroad.",
+  ctaApplyLabel: "Apply for training",
+  ctaProgramsLabel: "Explore programmes",
   courseMarqueeEyebrow: "Next intake",
   courseMarqueeHeading: "March 2026 — apply early",
   courseMarqueeBody: "Swap this line for offers, deadlines, or fee relief messaging.",

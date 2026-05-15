@@ -141,6 +141,14 @@
       </header>
 
       <div class="admin-shell__body">
+        <button
+          type="button"
+          class="admin-sidebar-backdrop"
+          id="admin-sidebar-backdrop"
+          hidden
+          aria-label="Close menu"
+          tabindex="-1"
+        ></button>
         <aside class="admin-sidebar" id="admin-sidebar" aria-label="Data feeds">
           <div
             class="admin-sidebar__pulse"
@@ -183,6 +191,12 @@
               <code class="admin-nav__path">site/public</code>
               <span class="admin-nav__count" id="admin-count-site">—</span>
             </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="lease-equipment">
+              <i class="fa-solid fa-truck-medical" aria-hidden="true"></i>
+              <span class="admin-nav__label">Lease equipment</span>
+              <code class="admin-nav__path">leaseEquipment</code>
+              <span class="admin-nav__count" id="admin-count-lease">—</span>
+            </button>
           </nav>
 
           <p class="admin-sidebar__section-title">Inbound (browser read off)</p>
@@ -201,6 +215,18 @@
               <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
               <span class="admin-nav__label">Pathways enquiries</span>
               <code class="admin-nav__path">pathwaysEnquiries</code>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-homecare">
+              <i class="fa-solid fa-house-medical" aria-hidden="true"></i>
+              <span class="admin-nav__label">Home care bookings</span>
+              <code class="admin-nav__path">homeCareBookings</code>
+              <span class="admin-nav__count" id="admin-count-homecare">—</span>
+            </button>
+            <button type="button" class="admin-nav__btn" data-admin-nav="inbox-lease">
+              <i class="fa-solid fa-kit-medical" aria-hidden="true"></i>
+              <span class="admin-nav__label">Equipment lease requests</span>
+              <code class="admin-nav__path">equipmentLeaseEnquiries</code>
+              <span class="admin-nav__count" id="admin-count-lease-inbox">—</span>
             </button>
             <button type="button" class="admin-nav__btn" data-admin-nav="inbox-apply">
               <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
@@ -247,6 +273,67 @@
             <div class="admin-placeholder">
               <p class="admin-placeholder__title">Module not implemented</p>
               <p class="admin-placeholder__text">Role postings editor will live here.</p>
+            </div>
+          </div>
+
+          <div class="admin-module" data-admin-module="lease-equipment">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Lease equipment catalogue</h1>
+              <p class="admin-module__lead">Add unlimited items with lease rates (e.g. KSh 2,500 / 24 hrs). Upload photos to Cloudinary — changes appear live on <a href="../equipment-leasing/">equipment-leasing</a>.</p>
+            </div>
+            <div class="admin-panel">
+              <div class="admin-lease-layout">
+                <div class="admin-lease-list-wrap">
+                  <div class="admin-lease-list__head"><h2>Items</h2><button type="button" class="admin-btn admin-btn--sm" id="admin-lease-new">+ New</button></div>
+                  <div id="admin-lease-list" class="admin-lease-list"></div>
+                </div>
+                <div class="admin-lease-editor">
+                  <label class="admin-label" for="admin-lease-slug">URL slug</label><input id="admin-lease-slug" class="admin-input" type="text" />
+                  <label class="admin-label" for="admin-lease-title">Title</label><input id="admin-lease-title" class="admin-input" type="text" maxlength="200" />
+                  <label class="admin-label" for="admin-lease-category">Category</label><input id="admin-lease-category" class="admin-input" type="text" maxlength="120" />
+                  <label class="admin-label" for="admin-lease-description">Description</label>
+                  <textarea id="admin-lease-description" class="admin-textarea admin-textarea--short" maxlength="1200"></textarea>
+                  <h3 class="admin-lease-editor__sub">Lease price</h3>
+                  <div class="admin-grid admin-grid--price">
+                    <div>
+                      <label class="admin-label" for="admin-lease-price-currency">Currency</label>
+                      <input id="admin-lease-price-currency" class="admin-input" type="text" value="KSh" maxlength="20" />
+                    </div>
+                    <div>
+                      <label class="admin-label" for="admin-lease-price-amount">Amount</label>
+                      <input id="admin-lease-price-amount" class="admin-input" type="number" min="0" step="1" placeholder="2500" />
+                    </div>
+                    <div>
+                      <label class="admin-label" for="admin-lease-price-period">Per</label>
+                      <select id="admin-lease-price-period" class="admin-input">
+                        <option value="24 hrs">24 hours</option>
+                        <option value="12 hrs">12 hours</option>
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="custom">Custom…</option>
+                      </select>
+                    </div>
+                  </div>
+                  <label class="admin-label" for="admin-lease-price-period-custom">Custom period label</label>
+                  <input id="admin-lease-price-period-custom" class="admin-input" type="text" maxlength="80" placeholder="e.g. 24 hrs" hidden />
+                  <p id="admin-lease-price-preview" class="admin-lease-price-preview">Enter amount and period to preview price.</p>
+                  <h3 class="admin-lease-editor__sub">Image (Cloudinary)</h3>
+                  <label class="admin-label" for="admin-lease-image-file">Upload photo</label>
+                  <input id="admin-lease-image-file" class="admin-input" type="file" accept="image/*" />
+                  <p id="admin-lease-upload-status" class="admin-upload-status"></p>
+                  <label class="admin-label" for="admin-lease-image-url">Image URL (auto-filled after upload)</label>
+                  <input id="admin-lease-image-url" class="admin-input" type="url" maxlength="1500" />
+                  <div id="admin-lease-image-preview" class="admin-lease-image-preview"></div>
+                  <label class="admin-label" for="admin-lease-image-alt">Image alt text</label>
+                  <input id="admin-lease-image-alt" class="admin-input" type="text" maxlength="300" />
+                  <label class="admin-label" for="admin-lease-sort">Sort order</label>
+                  <input id="admin-lease-sort" class="admin-input" type="number" min="0" value="10" />
+                  <label class="admin-label admin-label--inline"><input type="checkbox" id="admin-lease-available" checked /> Show on website</label>
+                  <div class="admin-actions"><button type="button" class="admin-btn" id="admin-lease-save">Save item</button><button type="button" class="admin-btn admin-btn--danger" id="admin-lease-delete">Delete</button></div>
+                  <p id="admin-lease-msg" class="admin-msg admin-hidden" role="status"></p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -368,6 +455,40 @@
             </div>
           </div>
 
+          <div class="admin-module" data-admin-module="inbox-homecare">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Home care bookings</h1>
+              <p class="admin-module__lead">
+                Realtime from <code>homeCareBookings</code> · <a href="../home-care/">/home-care/</a>
+              </p>
+            </div>
+            <div
+              class="admin-inbox"
+              data-inbox-collection="homeCareBookings"
+              data-inbox-count-id="admin-count-homecare"
+              data-inbox-list-id="admin-inbox-homecare-list"
+              data-inbox-detail-id="admin-inbox-homecare-detail"
+              data-inbox-status-id="admin-inbox-homecare-status"
+            ></div>
+          </div>
+
+          <div class="admin-module" data-admin-module="inbox-lease">
+            <div class="admin-module__header">
+              <h1 class="admin-module__title">Equipment lease requests</h1>
+              <p class="admin-module__lead">
+                Realtime from <code>equipmentLeaseEnquiries</code> · <a href="../equipment-leasing/">/equipment-leasing/</a>
+              </p>
+            </div>
+            <div
+              class="admin-inbox"
+              data-inbox-collection="equipmentLeaseEnquiries"
+              data-inbox-count-id="admin-count-lease-inbox"
+              data-inbox-list-id="admin-inbox-lease-list"
+              data-inbox-detail-id="admin-inbox-lease-detail"
+              data-inbox-status-id="admin-inbox-lease-status"
+            ></div>
+          </div>
+
           <div class="admin-module" data-admin-module="inbox-apply">
             <div class="admin-module__header">
               <h1 class="admin-module__title">Apply submissions</h1>
@@ -385,5 +506,7 @@
 
   <script type="module" src="../js/admin-console.mjs"></script>
   <script type="module" src="../js/admin-homepage.mjs"></script>
+  <script type="module" src="../js/admin-lease-equipment.mjs"></script>
+  <script type="module" src="../js/admin-inbox.mjs"></script>
 </body>
 </html>

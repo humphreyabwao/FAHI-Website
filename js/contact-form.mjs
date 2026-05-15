@@ -22,6 +22,13 @@ async function initContactForm() {
   const errBox = document.getElementById("contact-form-error");
   const okBox = document.getElementById("contact-form-success");
 
+  const subjectParam = new URLSearchParams(window.location.search).get("subject");
+  const subjectSelect = form.querySelector('select[name="subject"]');
+  if (subjectParam && subjectSelect) {
+    const match = [...subjectSelect.options].some((o) => o.value === subjectParam);
+    if (match) subjectSelect.value = subjectParam;
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     hide(errBox);

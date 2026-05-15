@@ -196,6 +196,68 @@ service cloud.firestore {
         && data.submittedFromPath.size() <= 400;
     }
 
+    function leaseEquipmentPayload(data, slugId) {
+      return data is map
+        && data.keys().size() <= 32
+        && data.title is string
+        && data.title.size() > 0
+        && data.title.size() <= 200
+        && data.description is string
+        && data.description.size() <= 1200
+        && data.category is string
+        && data.category.size() <= 120
+        && data.imageUrl is string
+        && data.imageUrl.size() <= 1500
+        && data.imageAlt is string
+        && data.imageAlt.size() <= 300
+        && data.sortOrder is number
+        && data.available is bool
+        && (!data.keys().hasAny(["priceAmount"]) || data.priceAmount is number)
+        && (!data.keys().hasAny(["priceCurrency"]) || (data.priceCurrency is string && data.priceCurrency.size() <= 20))
+        && (!data.keys().hasAny(["pricePeriod"]) || (data.pricePeriod is string && data.pricePeriod.size() <= 80))
+        && (!data.keys().hasAny(["priceLabel"]) || (data.priceLabel is string && data.priceLabel.size() <= 160));
+    }
+
+    function homeCareBookingPayload(p) {
+      return p is map
+        && p.keys().hasOnly([
+          "fullName",
+          "email",
+          "phone",
+          "location",
+          "careType",
+          "schedulePreference",
+          "details"
+        ])
+        && nonEmptyStr(p.fullName, 200)
+        && nonEmptyStr(p.email, 320)
+        && nonEmptyStr(p.phone, 80)
+        && nonEmptyStr(p.location, 240)
+        && nonEmptyStr(p.careType, 120)
+        && nonEmptyStr(p.schedulePreference, 120)
+        && nonEmptyStr(p.details, 16000);
+    }
+
+    function equipmentLeasePayload(p) {
+      return p is map
+        && p.keys().hasOnly([
+          "equipmentItem",
+          "fullName",
+          "email",
+          "phone",
+          "location",
+          "leaseDuration",
+          "details"
+        ])
+        && nonEmptyStr(p.equipmentItem, 300)
+        && nonEmptyStr(p.fullName, 200)
+        && nonEmptyStr(p.email, 320)
+        && nonEmptyStr(p.phone, 80)
+        && nonEmptyStr(p.location, 240)
+        && nonEmptyStr(p.leaseDuration, 80)
+        && nonEmptyStr(p.details, 16000);
+    }
+
     /** International pathways booking form payload (see international-pathways/index.html) */
     function pathwaysBookingPayload(p) {
       return p is map
@@ -292,6 +354,61 @@ service cloud.firestore {
         && request.resource.data.submittedFromPath is string
         && request.resource.data.submittedFromPath.size() <= 400;
       allow read, update, delete: if false;
+    }
+
+    // Equipment catalogue — public read; staff CRUD via /admin/
+    match /leaseEquipment/{slug} {
+      allow read: if true;
+      allow create, update: if isContentAdmin()
+        && validProgramSlug(slug)
+        && leaseEquipmentPayload(request.resource.data, slug);
+      allow delete: if isContentAdmin() && validProgramSlug(slug);
+    }
+
+    // Home care booking — anonymous auth + single create
+    match /homeCareBookings/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.submitterUid == request.auth.uid
+        && request.resource.data.keys().hasAll([
+          "formType",
+          "payload",
+          "source",
+          "submittedFromPath",
+          "submittedAt",
+          "submitterUid"
+        ])
+        && request.resource.data.keys().size() <= 12
+        && request.resource.data.formType == "booking"
+        && request.resource.data.source == "home-care-page"
+        && request.resource.data.payload is map
+        && homeCareBookingPayload(request.resource.data.payload)
+        && request.resource.data.submittedFromPath is string
+        && request.resource.data.submittedFromPath.size() <= 400;
+      allow read: if isContentAdmin();
+      allow update, delete: if false;
+    }
+
+    // Equipment lease enquiries — anonymous auth + single create
+    match /equipmentLeaseEnquiries/{docId} {
+      allow create: if request.auth != null
+        && request.resource.data.submitterUid == request.auth.uid
+        && request.resource.data.keys().hasAll([
+          "formType",
+          "payload",
+          "source",
+          "submittedFromPath",
+          "submittedAt",
+          "submitterUid"
+        ])
+        && request.resource.data.keys().size() <= 12
+        && request.resource.data.formType == "lease"
+        && request.resource.data.source == "equipment-leasing-page"
+        && request.resource.data.payload is map
+        && equipmentLeasePayload(request.resource.data.payload)
+        && request.resource.data.submittedFromPath is string
+        && request.resource.data.submittedFromPath.size() <= 400;
+      allow read: if isContentAdmin();
+      allow update, delete: if false;
     }
 
     // International pathways booking — anonymous auth + single create

@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "slug": "hospital-bed",
+      "title": "Hospital bed",
+      "category": "Mobility & bedding",
+      "description": "Adjustable home-care bed for recovery and long-term comfort.",
+      "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d45fd1?w=640&h=400&fit=crop&q=80&auto=format",
+      "imageAlt": "Hospital bed in a home care setting",
+      "sortOrder": 1,
+      "available": true,
+      "priceAmount": 2500,
+      "priceCurrency": "KSh",
+      "pricePeriod": "24 hrs",
+      "priceLabel": "KSh 2,500 / 24 hrs"
+    },
+    {
+      "slug": "oxygen-concentrator",
+      "title": "Oxygen concentrator",
+      "category": "Respiratory",
+      "description": "Home oxygen support with setup guidance and monitoring per care plan.",
+      "imageUrl": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=640&h=400&fit=crop&q=80&auto=format",
+      "imageAlt": "Medical oxygen equipment",
+      "sortOrder": 2,
+      "available": true,
+      "priceAmount": 3500,
+      "priceCurrency": "KSh",
+      "pricePeriod": "24 hrs",
+      "priceLabel": "KSh 3,500 / 24 hrs"
+    },
+    {
+      "slug": "wheelchair",
+      "title": "Wheelchair",
+      "category": "Mobility & bedding",
+      "description": "Standard and transport wheelchairs for home and escort use.",
+      "imageUrl": "https://images.unsplash.com/photo-1576765607924-3f7d35b8072e?w=640&h=400&fit=crop&q=80&auto=format",
+      "imageAlt": "Wheelchair for patient mobility",
+      "sortOrder": 3,
+      "available": true,
+      "priceAmount": 800,
+      "priceCurrency": "KSh",
+      "pricePeriod": "day",
+      "priceLabel": "KSh 800 / day"
+    },
+    {
+      "slug": "cpap-bipap",
+      "title": "CPAP / BiPAP device",
+      "category": "Respiratory",
+      "description": "Sleep and respiratory support devices with adherence guidance.",
+      "imageUrl": "https://images.unsplash.com/photo-1631217868264-e5b1bb5e8932?w=640&h=400&fit=crop&q=80&auto=format",
+      "imageAlt": "CPAP respiratory support device",
+      "sortOrder": 4,
+      "available": true,
+      "priceAmount": 4200,
+      "priceCurrency": "KSh",
+      "pricePeriod": "24 hrs",
+      "priceLabel": "KSh 4,200 / 24 hrs"
+    }
+  ]
+}

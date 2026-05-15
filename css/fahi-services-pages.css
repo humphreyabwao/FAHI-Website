@@ -1,0 +1,663 @@
+/* FAHI — Home care & equipment leasing pages */
+
+.svc-page {
+  background: #f8fafc;
+}
+
+.svc-hero {
+  padding: 3.5rem 0 2.85rem;
+  color: #fff;
+  background:
+    linear-gradient(rgba(11, 47, 74, 0.78), rgba(0, 119, 200, 0.72)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1800&h=1100&fit=crop&q=80&auto=format") center / cover no-repeat;
+}
+
+.svc-hero--equipment {
+  background:
+    linear-gradient(rgba(11, 47, 74, 0.78), rgba(0, 119, 200, 0.72)),
+    url("https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1800&h=1100&fit=crop&q=80&auto=format") center / cover no-repeat;
+}
+
+.svc-hero__eyebrow {
+  margin: 0 0 0.55rem;
+  font-size: 0.74rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.svc-hero__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+  line-height: 1.15;
+  font-weight: 800;
+  max-width: 40rem;
+}
+
+.svc-hero__lead {
+  margin: 0;
+  max-width: 44rem;
+  font-size: 0.96rem;
+  line-height: 1.68;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.svc-hero__meta {
+  margin: 1rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.svc-hero__actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.svc-section {
+  padding: 2.25rem 0;
+  border-top: 1px solid #e8eef4;
+}
+
+.svc-section--white {
+  background: #fff;
+}
+
+.svc-section__title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  font-weight: 800;
+  color: #0b2f4a;
+  line-height: 1.2;
+}
+
+.svc-section__lead {
+  margin: 0 0 1rem;
+  max-width: 52rem;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.svc-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.svc-pillar {
+  padding: 1rem 0.95rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.svc-pillar__title {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0b2f4a;
+}
+
+.svc-pillar__text,
+.svc-pillar__list {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #475569;
+}
+
+.svc-pillar__list {
+  padding-left: 1rem;
+}
+
+.svc-pillar__list li {
+  margin-bottom: 0.25rem;
+}
+
+.svc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.svc-services-grid li {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #334155;
+  padding-left: 0.95rem;
+  position: relative;
+}
+
+.svc-services-grid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0077c8;
+}
+
+.svc-services-grid strong {
+  color: #0b2f4a;
+  font-weight: 700;
+}
+
+.svc-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.svc-checklist li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.svc-checklist li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  font-size: 0.72rem;
+  color: #0077c8;
+}
+
+.svc-contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  background: #e7f6fb;
+  border: 1px solid #cfe8f5;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #0b2f4a;
+}
+
+.svc-contact-bar a {
+  color: #0077c8;
+  font-weight: 600;
+}
+
+.svc-form-wrap {
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  padding: 1rem 1rem 1.1rem;
+}
+
+.svc-form-wrap__title {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b2f4a;
+}
+
+.svc-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.svc-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.svc-form label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.svc-form label span {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.svc-form input,
+.svc-form select,
+.svc-form textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.58rem 0.68rem;
+  font: inherit;
+  font-size: 0.88rem;
+  color: #0f172a;
+  background: #fff;
+}
+
+.svc-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.svc-form input:focus,
+.svc-form select:focus,
+.svc-form textarea:focus {
+  outline: none;
+  border-color: #0077c8;
+  box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.1);
+}
+
+.svc-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.svc-form__status {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.svc-form__status.is-error {
+  color: #991b1b;
+}
+
+.svc-form__status.is-success {
+  color: #065f46;
+}
+
+.svc-pay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.svc-pay-card {
+  padding: 0.85rem 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.svc-pay-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  color: #0b2f4a;
+}
+
+.svc-pay-card p {
+  margin: 0 0 0.25rem;
+}
+
+/* Equipment catalogue — horizontal scroll */
+.svc-catalog-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.svc-catalog-search {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.svc-catalog-search__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.svc-catalog-search__field {
+  --svc-search-expand: min(280px, calc(100vw - 3rem));
+  display: inline-flex;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 4px 14px -8px rgba(11, 47, 74, 0.35);
+  overflow: hidden;
+  cursor: text;
+  transition:
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease,
+    border-color 0.2s ease;
+}
+
+.svc-catalog-search__icon {
+  flex: 0 0 2.75rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  color: #0077c8;
+  pointer-events: none;
+}
+
+.svc-catalog-search__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  font-size: 0.88rem;
+  color: #0b2f4a;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.05s;
+}
+
+.svc-catalog-search__input::placeholder {
+  color: #94a3b8;
+}
+
+.svc-catalog-search__input:focus {
+  outline: none;
+}
+
+.svc-catalog-search__clear {
+  flex: 0 0 0;
+  width: 0;
+  height: 1.75rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.svc-catalog-search__clear:not([hidden]) {
+  flex: 0 0 1.75rem;
+  width: 1.75rem;
+  margin-right: 0.35rem;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.svc-catalog-search__clear:hover {
+  background: #f1f5f9;
+  color: #0b2f4a;
+}
+
+.svc-catalog-search__clear:focus-visible {
+  outline: 2px solid #0077c8;
+  outline-offset: 2px;
+}
+
+.svc-catalog-search__field:hover,
+.svc-catalog-search__field:focus-within,
+.svc-catalog-search.is-expanded .svc-catalog-search__field {
+  width: var(--svc-search-expand);
+  border-radius: 10px;
+  border-color: #0077c8;
+  box-shadow: 0 0 0 3px rgba(0, 119, 200, 0.12);
+}
+
+.svc-catalog-search__field:hover .svc-catalog-search__input,
+.svc-catalog-search__field:focus-within .svc-catalog-search__input,
+.svc-catalog-search.is-expanded .svc-catalog-search__input {
+  width: 100%;
+  padding: 0.55rem 0.25rem 0.55rem 0;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svc-catalog-search__field,
+  .svc-catalog-search__input,
+  .svc-catalog-search__clear {
+    transition: none;
+  }
+}
+
+.svc-catalog-no-results {
+  border-style: solid;
+  border-color: #e2e8f0;
+  background: #f8fafc;
+}
+
+.svc-catalog-track-outer {
+  position: relative;
+  --svc-catalog-cols: 4;
+  --svc-catalog-gap: 0.85rem;
+}
+
+@media (max-width: 1100px) {
+  .svc-catalog-track-outer {
+    --svc-catalog-cols: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .svc-catalog-track-outer {
+    --svc-catalog-cols: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .svc-catalog-track-outer {
+    --svc-catalog-cols: 1;
+  }
+}
+
+.svc-catalog-track-outer .pscroll-arrow--left {
+  left: 0.25rem;
+}
+
+.svc-catalog-track-outer .pscroll-arrow--right {
+  right: 0.25rem;
+}
+
+.svc-catalog-track {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.25rem 2.25rem 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.svc-catalog-track::-webkit-scrollbar {
+  display: none;
+}
+
+.svc-catalog-page {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--svc-catalog-cols), minmax(0, 1fr));
+  gap: var(--svc-catalog-gap);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  box-sizing: border-box;
+}
+
+.svc-equip-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -18px rgba(11, 47, 74, 0.35);
+}
+
+.svc-catalog-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  padding: 0 2.25rem;
+}
+
+.svc-catalog-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.svc-catalog-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.svc-catalog-dot:hover {
+  background: #94a3b8;
+}
+
+.svc-catalog-dot.is-active {
+  background: #0077c8;
+  transform: scale(1.2);
+}
+
+.svc-catalog-dot:focus-visible {
+  outline: 2px solid #0077c8;
+  outline-offset: 2px;
+}
+
+.svc-catalog-page-label {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.02em;
+}
+
+.svc-equip-card__media {
+  aspect-ratio: 16 / 10;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.svc-equip-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.svc-equip-card__body {
+  padding: 0.85rem 0.9rem 0.95rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.svc-equip-card__cat {
+  margin: 0 0 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #0077c8;
+}
+
+.svc-equip-card__title {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #0b2f4a;
+  line-height: 1.25;
+}
+
+.svc-equip-card__price {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0077c8;
+  letter-spacing: 0.02em;
+}
+
+.svc-equip-card__price--muted {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.svc-equip-card__text {
+  margin: 0;
+  flex: 1;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.svc-equip-card__btn {
+  margin-top: 0.75rem;
+  align-self: flex-start;
+  padding: 0.52rem 1rem;
+  font-size: 0.8rem;
+}
+
+.svc-catalog-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .svc-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-pay-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
